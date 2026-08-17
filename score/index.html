@@ -31,6 +31,11 @@
   .lead{font-size:clamp(15px,2.2vw,19px);color:var(--muted);max-width:780px;margin:16px 0 0;font-weight:500}
   .promise{margin:22px 0 0;padding:18px 22px;background:var(--green-deep);color:#F6F2E9;border-radius:16px;font-size:clamp(14px,2vw,17px);font-weight:500;line-height:1.5}
   .promise b{color:#F4C775;font-weight:600}
+  .current{display:flex;align-items:center;justify-content:space-between;gap:16px;margin-bottom:24px;padding:15px 17px;background:var(--green-soft);border:1px solid rgba(14,92,70,.25);border-radius:14px}
+  .current p{font-size:13.5px;color:var(--muted)}
+  .current b{display:block;color:var(--green-deep);font-family:"Unbounded",sans-serif;font-size:12px;margin-bottom:3px}
+  .current a{flex:none;background:var(--green);color:#fff;border-radius:9px;padding:9px 12px;text-decoration:none;font-size:12px;font-weight:700}
+  @media (max-width:620px){.current{align-items:flex-start;flex-direction:column}.current a{width:100%;text-align:center}}
 
   .idx{display:flex;flex-wrap:wrap;gap:7px;margin:22px 0 6px}
   .idx a{background:var(--card);border:1px solid var(--line);border-radius:9px;padding:6px 11px;font-size:12.5px;font-weight:500;text-decoration:none;color:var(--muted);transition:.15s}
@@ -85,7 +90,8 @@
 <div class="wrap">
 
   <header>
-    <div class="kicker">Оценка звонка · спецификация · канон v2.11</div>
+    <div class="current"><p><b>Актуальное обучение менеджера</b>15 гейтов, 100 баллов и восемь этапов уже собраны в новой понятной версии.</p><a href="../training/">Открыть обучение →</a></div>
+    <div class="kicker">Архив · оценка звонка · спецификация v2.11</div>
     <h1>Из чего строится <span class="hl">оценка</span></h1>
     <p class="lead">Один прогон ИИ по записи каждого первого звонка → два вердикта разной валюты: <b>гейт</b> («узнал ли клиента» → судьба пустого лида; деньги/договор закрепляют лид сами) и <b>балл</b> («как продавал» → рейтинг и деньги) + сквозные проверки. Страница — единый источник для менеджера, РОПа и разработчика. Боевой промт: v1.1.15 (полный текст — на <a href="../qa/" style="color:var(--green)">/qa/</a> в настройках).</p>
     <div class="promise">Третьей оценки нет. «Этапы звонка» — это <b>контейнеры</b>: в каждом его гейт-пункты и его качество. Этап «провален» = провален его гейт-пункт ИЛИ его качество — бинарно, без обманчивых процентов.</div>
