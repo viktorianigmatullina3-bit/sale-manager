@@ -4,7 +4,6 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Обучение оценке звонка — SALE 100.0</title>
-<meta name="robots" content="noindex, nofollow">
 <meta name="description" content="Полное обучение менеджера: 15 гейтов клиента, оценка продажи 0–100, денежная выгода, презентация цены, совместное подписание договора и следующий шаг.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -72,16 +71,13 @@
   .prompt-download span{font-family:"Unbounded";font-size:10px;text-transform:uppercase;letter-spacing:.06em}
   .never-sum{margin-top:12px;border-radius:13px;padding:13px 16px;background:var(--blue-soft);border:1px solid rgba(40,91,122,.2);font-size:14px;color:#264D65}
 
-  .status-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:9px;margin-top:16px}
-  .status{background:var(--card);border:1px solid var(--line);border-radius:13px;padding:13px}
-  .status b{display:block;font-size:13px}
-  .status p{font-size:12px;color:var(--muted);margin-top:4px}
-  .status.good{border-top:3px solid var(--green)}
-  .status.warn{border-top:3px solid var(--amber)}
-  .status.bad{border-top:3px solid var(--red)}
-  .status.neutral{border-top:3px solid #8B857B}
-  .formula{margin-top:12px;background:var(--green-deep);color:#F7F2E8;border-radius:14px;padding:15px 17px;font-size:14px}
-  .formula b{color:#F4C775}
+  .format-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:9px;margin-top:16px}
+  .format-step{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:15px;box-shadow:var(--shadow)}
+  .format-step .step-no{display:inline-flex;align-items:center;justify-content:center;min-width:30px;height:25px;border-radius:7px;background:var(--green-soft);color:var(--green);font:800 10px "Unbounded"}
+  .format-step h3{font-size:13px;margin-top:10px}
+  .format-step p{font-size:12.5px;color:var(--muted);margin-top:5px}
+  .format-rule{margin-top:12px;background:var(--green-deep);color:#F7F2E8;border-radius:14px;padding:15px 17px;font-size:14px}
+  .format-rule b{color:#F4C775}
 
   .gate-group{margin-top:24px}
   .gate-group-head{display:flex;align-items:center;gap:10px;margin-bottom:10px}
@@ -167,12 +163,28 @@
   .type-card p{font-size:12.5px;color:var(--muted);margin-top:6px}
   .type-card .result{display:inline-block;margin-top:9px;border-radius:7px;padding:4px 7px;background:var(--green-soft);color:var(--green);font-size:11px;font-weight:700}
 
-  .example-layout{display:grid;grid-template-columns:1fr 1fr;gap:12px}
-  .note-example{background:var(--card);border:1px solid var(--line);border-radius:16px;overflow:hidden}
+  .example-layout{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);align-items:start;gap:12px}
+  .note-example{min-width:0;background:var(--card);border:1px solid var(--line);border-radius:16px;overflow:hidden}
   .note-title{padding:12px 15px;background:var(--green-deep);color:#fff;font-family:"Unbounded";font-size:12px;font-weight:700}
   .note-example.quality .note-title{background:#6D4A12}
   .note-body{padding:16px;font-size:13px;white-space:pre-line;color:var(--muted)}
   .note-body b{color:var(--ink)}
+  .client-note .note-body{padding:0;white-space:normal}
+  .client-score{display:flex;align-items:flex-end;justify-content:space-between;gap:12px;padding:17px 18px;background:var(--green-soft);border-bottom:1px solid var(--line)}
+  .client-score span{font-family:"Unbounded";font-size:10px;letter-spacing:.09em;text-transform:uppercase;color:var(--green)}
+  .client-score strong{font:800 clamp(30px,5vw,42px)/1 "Unbounded";color:var(--green);white-space:nowrap}
+  .client-group{padding:14px 16px;border-bottom:1px solid var(--line)}
+  .client-group h4{font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--green)}
+  .client-fields{margin-top:7px}
+  .client-field{display:grid;grid-template-columns:minmax(105px,.36fr) minmax(0,1fr);gap:9px;padding:6px 0;font-size:12.5px}
+  .client-field dt{font-weight:600;color:var(--ink)}
+  .client-field dd{margin:0;color:var(--muted);overflow-wrap:anywhere}
+  .client-dobrat{margin:14px 16px;padding:12px 13px;background:var(--gold-soft);border:1px solid rgba(194,121,15,.3);border-radius:11px;color:#614C27;font-size:12.5px}
+  .client-dobrat h4{font-family:"Unbounded";font-size:10.5px;color:#6E4A09}
+  .client-dobrat ul{margin:8px 0 0 18px}
+  .client-dobrat li+li{margin-top:4px}
+  .client-summary{padding:14px 16px;background:var(--green-soft);border-top:1px solid rgba(14,92,70,.14);font-size:12.5px;color:#244A3E}
+  .client-summary b{display:block;font-family:"Unbounded";font-size:10.5px;letter-spacing:.06em;text-transform:uppercase;color:var(--green);margin-bottom:5px}
   .action-today{margin-top:12px;background:var(--gold-soft);border:1px solid rgba(194,121,15,.3);border-radius:14px;padding:15px 17px;font-size:13.5px}
   .action-today h3{font-size:14px;color:#6E4A09}
   .action-today ol{margin:9px 0 0 20px;color:#614C27}
@@ -193,7 +205,7 @@
 
   @media (max-width:840px){
     .hero-metrics,.type-grid{grid-template-columns:1fr 1fr}
-    .status-grid{grid-template-columns:1fr 1fr}
+    .format-grid{grid-template-columns:1fr 1fr}
     .score-total,.example-layout{grid-template-columns:1fr}
     .price-parts{grid-template-columns:1fr}
   }
@@ -210,13 +222,16 @@
   @media (max-width:420px){
     h1{font-size:36px}
     .metric{padding:14px}
-    .status-grid{grid-template-columns:1fr}
+    .format-grid{grid-template-columns:1fr}
     .gate{padding:15px}
+    .client-field{grid-template-columns:1fr;gap:2px}
+    .client-group,.client-summary{padding:12px 13px}
   }
   @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
   @media print{
     body{background:#fff}.wrap{max-width:none}.topbar,.index,.print{display:none!important}
     header{padding-top:20px}.metric,.gate,.score-card,.stage-body,.note-example,details{box-shadow:none;break-inside:avoid}
+    .client-note{break-inside:auto}.client-group,.client-dobrat,.client-summary{break-inside:avoid}
     section{break-before:auto}.gate-grid{display:block}.gate{margin-bottom:10px}
   }
 </style>
@@ -240,7 +255,7 @@
     </div>
     <nav class="index" aria-label="Разделы обучения">
       <a href="#two-notes">Два примечания</a>
-      <a href="#statuses">Статусы</a>
+      <a href="#note-format">Формат карточки</a>
       <a href="#gates">15 гейтов</a>
       <a href="#score">100 баллов</a>
       <a href="#focus">Запавший блок</a>
@@ -260,7 +275,7 @@
           <div class="num">Примечание №1</div>
           <h3>Картина клиента и гейты</h3>
           <p>Отвечает на вопрос: <strong>«Что мы знаем и что осталось добрать?»</strong></p>
-          <ul><li>15 обязательных пунктов;</li><li>полные, частичные и отсутствующие ответы;</li><li>выбранное решение и деньги в процедуре;</li><li>без баллов и критики менеджера.</li></ul>
+          <ul><li>счётчик «ГЕЙТЫ: X/15» только наверху;</li><li>факты клиента в четырёх понятных блоках;</li><li>один список «Добрать» и краткий итог;</li><li>без служебных статусов, баллов и критики менеджера.</li></ul>
           <a class="prompt-download" href="../docs/prompt-1-client-note-15-gates.md" download>Скачать промт №1 <span>.md</span></a>
         </article>
         <article class="system-card quality">
@@ -272,24 +287,20 @@
         </article>
       </div>
       <div class="never-sum"><b>Пример:</b> у менеджера может быть 15/15 гейтов и 62/100 за продажу — клиента изучил, но плохо презентовал. Или 12/15 и 92/100 — продавал сильно, но оставил пробелы в анкете.</div>
-      <div class="never-sum"><b>Источник оценки:</b> факты клиента можно дополнить подтверждёнными данными из CRM и предыдущих частей этой же сессии. Баллы качества даются только за слышимые действия менеджера в записи или транскрипте — по одному старому примечанию их выставлять нельзя.</div>
+      <div class="never-sum"><b>Источник оценки:</b> оба примечания строятся только по транскрибации полной консультационной сессии. Старые саммари и прежние примечания не считаются источником фактов; действия менеджера засчитываются только тогда, когда они слышны в записи.</div>
     </section>
 
-    <section id="statuses">
+    <section id="note-format">
       <div class="section-head">
-        <div><div class="eyebrow">02 · как считается полнота</div><h2>Не каждый пробел — ошибка менеджера</h2><p>Сначала ИИ определяет причину отсутствия данных, и только после этого формирует «Добрать» и «Не спросил».</p></div>
+        <div><div class="eyebrow">02 · чистая карточка</div><h2>Как выглядит примечание №1</h2><p>В CRM попадает только понятная картина клиента. Технические статусы ИИ проверяет внутри и не показывает менеджеру.</p></div>
       </div>
-      <div class="status-grid">
-        <div class="status good"><b>Собрано</b><p>Полный подтверждённый ответ. Явное «нет» тоже считается ответом.</p></div>
-        <div class="status warn"><b>Частично</b><p>Факт есть, но не хватает обязательной детали.</p></div>
-        <div class="status neutral"><b>Клиент не сообщил</b><p>Менеджер спросил корректно, но клиент не знает или не отвечает.</p></div>
-        <div class="status bad"><b>Не спросил / не проговорил</b><p>Вопрос не прозвучал либо менеджер не объяснил обязательное применимое условие.</p></div>
-        <div class="status good"><b>N/A с причиной</b><p>Пункт действительно неприменим. Причина обязательна.</p></div>
-        <div class="status bad"><b>Противоречие</b><p>Есть две несовместимые версии, которые не уточнили.</p></div>
-        <div class="status neutral"><b>Не разобрать</b><p>Аудио или роли спикеров не позволяют уверенный вывод.</p></div>
-        <div class="status neutral"><b>Ещё не дошли</b><p>Сессия продолжается; это не ошибка и не автозачёт.</p></div>
+      <div class="format-grid">
+        <article class="format-step"><span class="step-no">01</span><h3>Счётчик наверху</h3><p>Сразу после заголовка — только «ГЕЙТЫ: X/15», один раз.</p></article>
+        <article class="format-step"><span class="step-no">02</span><h3>Факты по темам</h3><p>Долги, клиент и семья, имущество, решение — каждый блок отдельно.</p></article>
+        <article class="format-step"><span class="step-no">03</span><h3>Один хвост</h3><p>Все реальные пробелы собраны только в одном блоке «Добрать».</p></article>
+        <article class="format-step"><span class="step-no">04</span><h3>Короткий итог</h3><p>Внизу 2–3 предложения: проблема, одно решение и позиция клиента.</p></article>
       </div>
-      <div class="formula"><b>Закрыто X/15</b> = полностью собрано + обоснованный N/A. Частичный ответ, молчание клиента и «ещё не дошли» в X не входят.</div>
+      <div class="format-rule"><b>Если данных не хватает:</b> причина пишется прямо в нужной строке — «Не спросил: залог» или «Менеджер спросил; клиент не знает». Уже известные факты при этом не стираются. Отдельных служебных списков нет.</div>
     </section>
 
     <section id="gates">
@@ -328,7 +339,7 @@
           </article>
           <article class="gate">
             <div class="gate-head"><div class="gate-no">05</div><div><h4>Ежемесячный платёж</h4><p class="why">Сколько клиент реально отдаёт сейчас по всем обязательствам.</p></div></div>
-            <div class="criteria"><div class="criterion"><b>Зачёт</b>Сумма в месяц или явное «сейчас не плачу».</div><div class="criterion no"><b>Не зачёт</b>Цена услуг или предложенный будущий платёж.</div></div>
+            <div class="criteria"><div class="criterion"><b>Зачёт</b>Точная, приблизительная или диапазонная сумма в месяц либо «сейчас не плачу».</div><div class="criterion no"><b>Не зачёт</b>Цена услуг или предложенный будущий платёж.</div></div>
             <div class="ask"><b>Спроси:</b> «Сколько сейчас в сумме уходит банкам каждый месяц?»</div>
           </article>
           <article class="gate">
@@ -337,13 +348,13 @@
             <div class="ask"><b>Спроси:</b> «Работаете сейчас? Официально? Какой доход получаете на данный момент?»</div>
           </article>
           <article class="gate">
-            <div class="gate-head"><div class="gate-no">07</div><div><h4>Семья и иждивенцы</h4><p class="why">Семейный статус, несовершеннолетние дети и другие иждивенцы.</p></div></div>
-            <div class="criteria"><div class="criterion"><b>Зачёт</b>Статус + наличие/количество детей и иждивенцев.</div><div class="criterion no"><b>Не зачёт</b>Известно только «холост», но про детей не спросили.</div></div>
-            <div class="ask"><b>Спроси:</b> «Вы в браке? Есть дети до 18 лет или другие иждивенцы?»</div>
+            <div class="gate-head"><div class="gate-no">07</div><div><h4>Семья и дети</h4><p class="why">Семейный статус, наличие и количество несовершеннолетних детей.</p></div></div>
+            <div class="criteria"><div class="criterion"><b>Зачёт</b>Статус + наличие и количество детей до 18 лет. Других иждивенцев перенеси, если клиент сам их назвал.</div><div class="criterion no"><b>Не зачёт</b>Известно только «холост», но про детей не спросили.</div></div>
+            <div class="ask"><b>Спроси:</b> «Вы в браке? Есть дети до 18 лет? Сколько?»</div>
           </article>
           <article class="gate">
             <div class="gate-head"><div class="gate-no">08</div><div><h4>ИП / ООО</h4><p class="why">Текущая и прошлая деятельность, роль и доли.</p></div></div>
-            <div class="criteria"><div class="criterion"><b>Зачёт</b>Есть/нет сейчас и ранее; для действующего — готовность закрыть при необходимости.</div><div class="criterion no"><b>Не зачёт</b>Спросили только про действующее ИП.</div></div>
+            <div class="criteria"><div class="criterion"><b>Зачёт</b>Есть/нет сейчас и ранее; для действующего — готовность закрыть при необходимости.</div><div class="criterion no"><b>Не зачёт</b>Решили, что ИП/ООО нет, только потому что клиент работает по найму.</div></div>
             <div class="ask"><b>Спроси:</b> «Сейчас или раньше были ИП, ООО, доли в компании?»</div>
           </article>
           <article class="gate critical">
@@ -364,7 +375,7 @@
         <div class="gate-grid">
           <article class="gate">
             <div class="gate-head"><div class="gate-no">11</div><div><h4>Супруг/супруга в курсе</h4><p class="why">Если партнёр есть — знает ли о решении и как относится.</p></div></div>
-            <div class="criteria"><div class="criterion"><b>Зачёт</b>Осведомлённость и отношение супруга; N/A только при подтверждённом отсутствии партнёра.</div><div class="criterion no"><b>Не зачёт</b>Супруг не упомянут, поэтому автоматически поставили N/A.</div></div>
+            <div class="criteria"><div class="criterion"><b>Зачёт</b>Осведомлённость и отношение супруга. Подтверждённое «партнёра нет» тоже закрывает гейт.</div><div class="criterion no"><b>Не зачёт</b>Партнёр не упомянут, но менеджер решил, что его нет.</div></div>
             <div class="ask"><b>Спроси:</b> «Супруг или супруга в курсе? Как относится к вашему решению?»</div>
           </article>
           <article class="gate">
@@ -373,9 +384,9 @@
             <div class="ask"><b>Спроси:</b> «Какой результат для вас сейчас самый важный?»</div>
           </article>
           <article class="gate">
-            <div class="gate-head"><div class="gate-no">13</div><div><h4>Конкуренты</h4><p class="why">Другие консультации, предложения и критерии сравнения.</p></div></div>
-            <div class="criteria"><div class="criterion"><b>Зачёт</b>Были/нет; если были — что предложили и почему не заключил.</div><div class="criterion no"><b>Не зачёт</b>«С кем-то говорил» без содержания и критерия выбора.</div></div>
-            <div class="ask"><b>Спроси:</b> «Где уже консультировались? Что предлагали и почему пока не заключили?»</div>
+            <div class="gate-head"><div class="gate-no">13</div><div><h4>Конкуренты и альтернативы</h4><p class="why">Юристы, банки, рефинансирование, новый кредит и другие способы решить проблему.</p></div></div>
+            <div class="criteria"><div class="criterion"><b>Зачёт</b>Были/нет; обращение в банк тоже считается, если понятны результат и причина отказа/выбора.</div><div class="criterion no"><b>Не зачёт</b>«С кем-то говорил» без содержания и результата.</div></div>
+            <div class="ask"><b>Спроси:</b> «Куда уже обращались — к юристам или в банки? Что предложили и почему вариант не подошёл?»</div>
           </article>
           <article class="gate">
             <div class="gate-head"><div class="gate-no">14</div><div><h4>Одно рекомендованное решение</h4><p class="why">Либо БФЛ, либо РДГ — одно итоговое решение по ситуации клиента.</p></div></div>
@@ -390,8 +401,8 @@
         <div class="gate-grid">
           <article class="gate">
             <div class="gate-head"><div class="gate-no">15</div><div><h4>Деньги в процедуре</h4><p class="why">БФЛ — прожиточный минимум; РДГ — условие про 50 000 ₽ в месяц.</p></div></div>
-            <div class="criteria"><div class="criterion"><b>Зачёт</b>Менеджер объяснил правильную ветку для выбранного решения и клиент подтвердил понимание.</div><div class="criterion no"><b>Не зачёт</b>Только «деньги останутся», неверная ветка, нет проверки понимания или 50 000 ₽ при РДГ перепутаны с госплатежами.</div></div>
-            <div class="ask"><b>Проверь:</b> при БФЛ — понимание прожиточного минимума и индивидуальной суммы; при РДГ — понимание условия про 50 000 ₽ в месяц.</div>
+            <div class="criteria"><div class="criterion"><b>Зачёт</b>Менеджер сообщил правильное условие для одного выбранного решения. В карточке — только «сообщил».</div><div class="criterion no"><b>Не зачёт</b>Не сообщил, назвал неверную ветку или перепутал 50 000 ₽ при РДГ с госплатежами. В карточке — только «не сообщил».</div></div>
+            <div class="ask"><b>Скажи:</b> при БФЛ — про прожиточный минимум; при РДГ — про 50 000 ₽ в месяц, остающихся клиенту на жизнь в процедуре. Проверка понимания для этого гейта не нужна.</div>
           </article>
         </div>
       </div>
@@ -485,14 +496,49 @@
     <section id="example">
       <div class="section-head"><div><div class="eyebrow">07 · учебный пример</div><h2>Как читать результат после звонка</h2><p>Цифры ниже вымышлены и показывают логику двух примечаний, а не оценку конкретного сотрудника.</p></div></div>
       <div class="example-layout">
-        <article class="note-example"><div class="note-title">Примечание №1 · клиент</div><div class="note-body"><b>ГЕЙТЫ: закрыто 12/15</b>
-
-⚠️ Добрать: залог автомобиля; детали сделки за три года; применимое условие денег в процедуре.
-Клиент не сообщил: нет.
-Не спросил/не проговорил: при БФЛ не объяснён прожиточный минимум.
-❓ Проверить: стоимость автомобиля названа приблизительно.
-Рекомендованное решение: БФЛ — одно итоговое решение.
-Деньги в процедуре: не проговорено.</div></article>
+        <article class="note-example client-note">
+          <div class="note-title">Примечание №1 · клиент</div>
+          <div class="note-body">
+            <div class="client-score"><span>Гейты</span><strong>11/15</strong></div>
+            <section class="client-group">
+              <h4>💳 Долговая ситуация</h4>
+              <dl class="client-fields">
+                <div class="client-field"><dt>Причина и боль</dt><dd>Не справляется с нагрузкой около 100 000 ₽; беспокоят звонки взыскателей и риск арестов.</dd></div>
+                <div class="client-field"><dt>Долг</dt><dd>Около 773 000 ₽.</dd></div>
+                <div class="client-field"><dt>Кредиторы</dt><dd>МФО — около 470 000 ₽; ВТБ — 303 000 ₽.</dd></div>
+                <div class="client-field"><dt>Просрочка</dt><dd>По МФО 1,5–2 месяца; есть звонки, один раз звонили родственникам. Судов, приставов и арестов нет.</dd></div>
+                <div class="client-field"><dt>ЕП</dt><dd>МФО — около 70 000 ₽; ВТБ — 18 400 ₽. Общая нагрузка около 88 400 ₽.</dd></div>
+              </dl>
+            </section>
+            <section class="client-group">
+              <h4>👤 Клиент и семья</h4>
+              <dl class="client-fields">
+                <div class="client-field"><dt>Работа / доход</dt><dd>Работает официально; 65 000–70 000 ₽. Неофициального дохода нет.</dd></div>
+                <div class="client-field"><dt>Семья и дети</dt><dd>В браке; один несовершеннолетний ребёнок.</dd></div>
+                <div class="client-field"><dt>ИП / ООО</dt><dd>Не спросил.</dd></div>
+                <div class="client-field"><dt>Супруга в курсе</dt><dd>Не спросил.</dd></div>
+              </dl>
+            </section>
+            <section class="client-group">
+              <h4>🏠 Имущество и риски</h4>
+              <dl class="client-fields">
+                <div class="client-field"><dt>Имущество</dt><dd>У клиента и супруги имущества нет; залогов и ипотеки нет.</dd></div>
+                <div class="client-field"><dt>Сделки за 3 года</dt><dd>Не спросил.</dd></div>
+              </dl>
+            </section>
+            <section class="client-group">
+              <h4>🎯 Решение</h4>
+              <dl class="client-fields">
+                <div class="client-field"><dt>Желаемый исход</dt><dd>Снизить платёж, прекратить звонки и сохранить возможность ипотеки в будущем.</dd></div>
+                <div class="client-field"><dt>Конкуренты</dt><dd>Обращался в банки за рефинансированием и новым кредитом; получил отказы.</dd></div>
+                <div class="client-field"><dt>Рекомендация</dt><dd>РДГ — одно итоговое решение, связанное с доходом и текущей нагрузкой.</dd></div>
+                <div class="client-field"><dt>Деньги в процедуре (РДГ)</dt><dd>не сообщил.</dd></div>
+              </dl>
+            </section>
+            <div class="client-dobrat"><h4>⚠️ Добрать</h4><ul><li><b>КРИТИЧНО:</b> сделки с имуществом за три года — не спросил.</li><li>ИП / ООО сейчас и ранее — не спросил.</li><li>Супруга в курсе и как относится — не спросил.</li><li>Сообщить про 50 000 ₽ в месяц, остающихся клиенту на жизнь при РДГ.</li></ul></div>
+            <div class="client-summary"><b>Краткий итог разговора</b>Клиент обратился из-за платежей выше дохода и звонков взыскателей. Рекомендована РДГ; клиент взял паузу, договор в звонке не подписан.</div>
+          </div>
+        </article>
         <article class="note-example quality"><div class="note-title">Примечание №2 · качество</div><div class="note-body"><b>Итоговая оценка: 62/100</b>
 Эмпатия: 12/15
 Оцифровка боли: 10/10
@@ -521,8 +567,8 @@
       <div class="section-head"><div><div class="eyebrow">08 · самопроверка</div><h2>Семь вопросов перед стартом</h2><p>Откройте ответ и проверьте, одинаково ли команда понимает правила.</p></div></div>
       <div class="quiz">
         <details><summary>Клиент сказал «ИП никогда не было». Гейт закрыт?</summary><p><b>Да.</b> Явное «нет» — полноценный ответ, а не отсутствие данных.</p></details>
-        <details><summary>Менеджер спросил ЕП, но клиент отказался отвечать. Это ошибка?</summary><p><b>Нет.</b> Гейт не закрыт, но причина — «клиент не сообщил», а не «менеджер не спросил».</p></details>
-        <details><summary>Госплатежи входят в 15 гейтов?</summary><p><b>Нет.</b> Они оцениваются внутри блока «Презентация цены».</p></details>
+        <details><summary>Менеджер спросил ЕП, но клиент не знает сумму. Это ошибка?</summary><p><b>Нет.</b> Гейт пока не закрыт, но в строке пишем: «Менеджер спросил; клиент не знает». В «Добрать» попадает само уточнение, а не обвинение менеджера.</p></details>
+        <details><summary>Госплатежи входят в 15 гейтов?</summary><p><b>Нет.</b> Они оцениваются внутри «Презентации цены». В гейте 15 при РДГ проверяется только факт: сообщил менеджер про 50 000 ₽ в месяц на жизнь в процедуре или не сообщил.</p></details>
         <details><summary>Что именно считается лестницей оплаты?</summary><p><b>Три последовательные ступени:</b> полный платёж или VIP → только после отказа часть сегодня → только после отказа точная дата оплаты с подтверждением клиента. Начал сразу с части/даты или пропустил нужную ступень — 0/5 за лестницу.</p></details>
         <details><summary>«Я отправил договор, посмотрите» — совместное подписание?</summary><p><b>Нет, это 0/25.</b> Менеджер должен выполнить всю цепочку: остаться на линии, вместе с клиентом дойти до страницы «Условия», провести по ней и прямо там предложить подписать договор сейчас. Пропущен любой шаг — весь пункт 0/25.</p></details>
         <details><summary>Следующий шаг входит в 15 гейтов?</summary><p><b>Нет.</b> Он оценивается только во втором примечании: для 10/10 нужны конкретные действие, ответственный, дата, нужное время и подтверждение клиента.</p></details>
