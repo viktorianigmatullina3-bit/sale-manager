@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Обучение оценке звонка — SALE 100.0</title>
-<meta name="description" content="Полное обучение менеджера: 15 гейтов клиента, шесть пунктов качества по шкале 1/0, денежная выгода, презентация цены, совместное подписание договора и следующий шаг.">
+<meta name="description" content="Полное обучение менеджера: 15 гейтов клиента, шесть пунктов качества по шкале 1/0 и обязательный СОС при совете взять новый долг ради списания.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@500;700;800&amp;family=Golos+Text:wght@400;500;600&amp;display=swap" rel="stylesheet">
@@ -136,6 +136,14 @@
   .price-part p{font-size:12.5px;color:var(--muted);margin-top:5px}
   .benefit-example{margin-top:11px;padding:12px 14px;background:var(--blue-soft);border:1px solid rgba(40,91,122,.2);border-radius:10px;color:#264D65;font-size:12.5px}
   .guard{margin-top:11px;padding:11px 13px;background:var(--red-soft);border-radius:10px;color:#6F2821;font-size:12.5px}
+  .sos-policy,.sos-status{border:2px solid var(--red);background:var(--red-soft);color:#6F2821;border-radius:14px}
+  .sos-policy{margin-top:14px;padding:17px 18px;display:grid;grid-template-columns:auto minmax(0,1fr);gap:13px;align-items:start}
+  .sos-icon{font-size:28px;line-height:1}
+  .sos-policy h3,.sos-status h4{font-family:"Unbounded";font-size:11px;letter-spacing:.05em;text-transform:uppercase;color:var(--red)}
+  .sos-policy p{margin-top:6px;font-size:13px}
+  .sos-policy ul{margin:9px 0 0 18px;font-size:12.5px}
+  .sos-policy li+li{margin-top:4px}
+  .sos-output{margin-top:11px;padding:11px 12px;background:rgba(255,255,255,.68);border-left:4px solid var(--red);border-radius:0 9px 9px 0;font-size:12.5px;overflow-wrap:anywhere}
 
   .stage-intro{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:16px}
   .stage-rule{background:var(--card);border:1px solid var(--line);border-radius:13px;padding:14px 15px;font-size:13px;color:var(--muted)}
@@ -190,6 +198,14 @@
   .quality-score{display:flex;align-items:flex-end;justify-content:space-between;gap:12px;padding:17px 18px;background:var(--gold-soft);border-bottom:1px solid var(--line)}
   .quality-score span{font-family:"Unbounded";font-size:10px;letter-spacing:.09em;text-transform:uppercase;color:#765512}
   .quality-score strong{font:800 clamp(30px,5vw,42px)/1 "Unbounded";color:#765512;white-space:nowrap}
+  .sos-status{margin:12px 16px 0;padding:12px 13px}
+  .sos-status.is-no{border-width:1px;background:#F3F7F4;color:var(--green-deep)}
+  .sos-status.is-no h4{color:var(--green)}
+  .sos-head{display:flex;justify-content:space-between;align-items:center;gap:8px;flex-wrap:wrap}
+  .sos-head strong{font:800 9.5px "Unbounded";letter-spacing:.04em;color:#fff;background:var(--red);padding:4px 7px;border-radius:6px}
+  .sos-status blockquote{margin-top:8px;padding:9px 10px;background:rgba(255,255,255,.65);border-left:3px solid var(--red);border-radius:0 8px 8px 0;font-size:12px;overflow-wrap:anywhere}
+  .sos-status blockquote span{white-space:nowrap;font-weight:700;color:var(--red)}
+  .sos-status p{margin-top:8px;font-size:12px;overflow-wrap:anywhere}
   .quality-lines{padding:7px 16px;margin:0}
   .quality-line{display:grid;grid-template-columns:minmax(0,1fr) max-content;align-items:start;gap:10px;padding:10px 0;border-bottom:1px solid var(--line)}
   .quality-line:last-child{border-bottom:0}
@@ -236,6 +252,7 @@
     .criteria,.stage-cols,.stage-intro,.quality-actions{grid-template-columns:1fr}
     .section-head{display:block}
     .score-legend{grid-template-columns:1fr}
+    .sos-policy{grid-template-columns:1fr}
   }
   @media (max-width:420px){
     h1{font-size:36px}
@@ -244,13 +261,14 @@
     .gate{padding:15px}
     .client-field{grid-template-columns:1fr;gap:2px}
     .client-group,.client-summary{padding:12px 13px}
-    .quality-lines{padding:6px 13px}.quality-focus,.quality-phrase{margin-left:13px;margin-right:13px}.quality-actions{margin-left:13px;margin-right:13px}
+    .quality-lines{padding:6px 13px}.sos-status,.quality-focus,.quality-phrase{margin-left:13px;margin-right:13px}.quality-actions{margin-left:13px;margin-right:13px}
   }
   @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
   @media print{
     body{background:#fff}.wrap{max-width:none}.topbar,.index,.print{display:none!important}
     header{padding-top:20px}.metric,.gate,.score-card,.stage-body,.note-example,details{box-shadow:none;break-inside:avoid}
-    .example-layout{grid-template-columns:1fr}.client-note,.quality-note{overflow:visible;break-inside:auto}.client-group,.client-dobrat,.client-summary,.quality-line,.quality-focus,.quality-phrase,.quality-action{break-inside:avoid}
+    .example-layout{grid-template-columns:1fr}.client-note,.quality-note{overflow:visible;break-inside:auto}.client-group,.client-dobrat,.client-summary,.sos-policy,.sos-status,.quality-line,.quality-focus,.quality-phrase,.quality-action{break-inside:avoid;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+    details>p{display:block!important}
     section{break-before:auto}.gate-grid{display:block}.gate{margin-bottom:10px}
   }
 </style>
@@ -265,7 +283,7 @@
   <header>
     <div class="kicker">SALE 100.0 · обучение менеджера</div>
     <h1>Как оценивается <span class="hl">звонок</span></h1>
-    <p class="lead">Полный разбор двух примечаний: что нужно узнать о клиенте, какие из шести пунктов качества пройдены и какое действие менеджер исправляет сразу после звонка.</p>
+    <p class="lead">Полный разбор двух примечаний: что нужно узнать о клиенте, какие из шести пунктов качества пройдены, есть ли критический СОС и что менеджер исправляет сразу после звонка.</p>
     <div class="hero-rule"><b>Главное правило:</b> гейты X/15 показывают полноту картины клиента, качество X/6 — как менеджер провёл продажу. Эти показатели не складываются.</div>
     <div class="hero-metrics" aria-label="Ключевые параметры обучения">
       <div class="metric"><span class="num">15</span><b>обязательных гейтов</b><p>Что мы должны знать о клиенте.</p></div>
@@ -277,6 +295,7 @@
       <a href="#note-format">Формат карточки</a>
       <a href="#gates">15 гейтов</a>
       <a href="#score">Оценка X/6</a>
+      <a href="#sos">СОС</a>
       <a href="#focus">Запавший блок</a>
       <a href="#types">Типы звонков</a>
       <a href="#example">Пример</a>
@@ -301,7 +320,7 @@
           <div class="num">Примечание №2</div>
           <h3>Качество продажи</h3>
           <p>Отвечает на вопрос: <strong>«Как менеджер провёл звонок?»</strong></p>
-          <ul><li>итог X/6 только для завершённой консультации;</li><li>шесть бинарных строк: каждый пункт получает 1 или 0;</li><li>причина сразу в строке и один главный провал;</li><li>правильная фраза и два коротких действия сегодня.</li></ul>
+          <ul><li>обязательный статус «🆘 СОС: НЕТ/ДА»; при неясном авторе — ручная проверка;</li><li>итог X/6 только для завершённой консультации;</li><li>шесть бинарных строк: каждый пункт получает 1 или 0;</li><li>причина сразу в строке и один главный провал;</li><li>правильная фраза и два коротких действия сегодня.</li></ul>
           <a class="prompt-download" href="../docs/prompt-2-sales-quality.md" download>Скачать промт №2 <span>.md</span></a>
         </article>
       </div>
@@ -446,6 +465,16 @@
         </div>
       </div>
 
+      <aside class="sos-policy" id="sos" aria-labelledby="sos-title">
+        <div class="sos-icon" aria-hidden="true">🆘</div>
+        <div>
+          <h3 id="sos-title">СОС · новый долг ради списания</h3>
+          <p><b>Это отдельная обязательная проверка поверх X/6, а не седьмой пункт.</b> СОС: ДА ставится, только когда менеджер предлагает или одобряет новый кредит, кредитку, займ в МФО, увеличение либо использование кредитного лимита <b>именно с расчётом потом не платить или списать этот новый долг</b>.</p>
+          <ul><li><b>СОС: ДА:</b> есть оба факта — новый долг и подтверждённая цель его невозврата/списания.</li><li><b>СОС: НЕТ:</b> менеджер спрашивает про существующие долги, предупреждает «так делать нельзя», обсуждает обычное рефинансирование с намерением исполнять новый договор или клиент сам высказал идею без одобрения менеджера.</li><li><b>Неясен автор:</b> ручная проверка с цитатой — без обвинения менеджера.</li><li><b>При СОС: ДА:</b> точная цитата и таймкод, приоритет №1, исправление клиенту и разбор с РОПом сегодня. Итог X/6 при этом не меняется.</li></ul>
+          <div class="sos-output"><b>Как видно в примечании:</b><br>🆘 СОС: ДА — НОВЫЙ ДОЛГ РАДИ СПИСАНИЯ<br>Цитата менеджера: «Оформите кредитку, используйте лимит, а потом этот долг спишем» [12:41].<br>Что произошло: менеджер предложил новый долг с расчётом на его последующее списание.</div>
+        </div>
+      </aside>
+
       <div class="score-grid">
         <article class="score-card">
           <div class="score-card-head"><div class="weight">1</div><div><h3>Эмпатия</h3><p class="desc">Контакт, слушание и человеческий разговор.</p></div></div>
@@ -485,10 +514,10 @@
 
     <section id="focus">
       <div class="section-head">
-        <div><div class="eyebrow">05 · где западает звонок</div><h2>Западает один из шести пунктов</h2><p>Никакой дополнительной системы этапов нет. ИИ выбирает слабейший из тех же шести пунктов оценки и объясняет одну главную ошибку.</p></div>
+        <div><div class="eyebrow">05 · где западает звонок</div><h2>Если СОС: НЕТ — западает один из шести пунктов</h2><p>СОС не является седьмым этапом и не получает балл. При СОС: ДА он становится главным провалом независимо от X/6; шесть строк всё равно оцениваются как обычно.</p></div>
       </div>
       <div class="stage-intro">
-        <div class="stage-rule"><b>Только шесть вариантов</b>Эмпатия · Оцифровка боли · Возражения · Презентация цены · Подписание · Следующий шаг.</div>
+        <div class="stage-rule"><b>Обычный выбор при СОС: НЕТ</b>Эмпатия · Оцифровка боли · Возражения · Презентация цены · Подписание · Следующий шаг.</div>
         <div class="stage-rule"><b>Одна главная ошибка</b>Цитата или подтверждённый пропуск → как нужно было → действие менеджера сегодня.</div>
       </div>
       <div class="stages">
@@ -511,6 +540,7 @@
         <div class="type-card"><h3>Жёсткий отказ</h3><p>Однозначное «не звоните/закройте заявку».</p><span class="result">Корректность завершения</span></div>
         <div class="type-card"><h3>Недозвон / сервис</h3><p>Нет продажи для оценки.</p><span class="result">Примечание не создаётся</span></div>
       </div>
+      <div class="never-sum"><b>Важно:</b> отсутствие итога X/6 не отменяет проверку СОС. Статус СОС обязателен в каждом непустом примечании №2 — в том числе для Partial, Setter, дожима и жёсткого отказа.</div>
     </section>
 
     <section id="example">
@@ -562,6 +592,11 @@
         <article class="note-example quality quality-note">
           <div class="note-title">Примечание №2 · качество</div>
           <div class="note-body">
+            <section class="sos-status" aria-labelledby="sos-example-title">
+              <div class="sos-head"><h4 id="sos-example-title"><span aria-hidden="true">🆘</span> СОС: ДА — НОВЫЙ ДОЛГ РАДИ СПИСАНИЯ</h4><strong>ПРИОРИТЕТ №1</strong></div>
+              <blockquote><b>Цитата менеджера:</b> «Можно оформить кредитку, использовать лимит, а потом этот долг всё равно спишем и платить не будете». <span>[12:41]</span></blockquote>
+              <p><b>Что произошло:</b> менеджер предложил использовать новый кредитный лимит с расчётом на невозврат и списание.</p>
+            </section>
             <div class="quality-score"><span>Итог</span><strong>2/6</strong></div>
             <dl class="quality-lines">
               <div class="quality-line fail"><dt><span class="quality-name">✕ Эмпатия</span><span class="quality-reason">Не резюмировал ситуацию и не проверил, правильно ли понял клиента.</span></dt><dd>0</dd></div>
@@ -571,11 +606,11 @@
               <div class="quality-line fail"><dt><span class="quality-name">✕ Совместное подписание</span><span class="quality-reason">Не предложил открыть ссылку сейчас, вместе пройти «Условия» и подписать договор в звонке.</span></dt><dd>0</dd></div>
               <div class="quality-line pass"><dt><span class="quality-name">✓ Следующий шаг</span><span class="quality-reason">Предложил первый платёж 13 309 ₽ в пятницу, 21 августа, и звонок в 18:00; клиент прямо отказался фиксировать и попросил подумать.</span></dt><dd>1</dd></div>
             </dl>
-            <div class="quality-focus"><h4>🚨 Главный провал · Возражения</h4><p><b>Доказательство:</b> клиент сказал «я подумаю», но менеджер не выяснил, что именно его останавливает, и не проверил снятие сомнения.</p><p><b>Как сделать:</b> позвонить сейчас, вернуть клиента в разговор и сначала раскрыть настоящую причину; к договору возвращаться после разбора сомнения.</p></div>
-            <div class="quality-phrase"><h4>💬 Правильная фраза</h4><blockquote>«Иван, я всё же думаю о нашем разговоре и никак не могу понять, что именно вызывает у вас сомнения. Давайте разберём?»</blockquote></div>
+            <div class="quality-focus"><h4>🚨 Главный провал · 🆘 СОС</h4><p><b>Что исправить:</b> немедленно отменить опасную рекомендацию клиенту. Остальные нули остаются видны в шести строках, но не перекрывают этот приоритет.</p></div>
+            <div class="quality-phrase"><h4>💬 Безопасная корректировка</h4><blockquote>«Иван, исправляю важный момент: не оформляйте новый кредит, кредитку или займ и не используйте новый лимит с расчётом на списание. Мы этого не рекомендуем. Давайте разберём решение только по вашим уже существующим обязательствам».</blockquote></div>
             <div class="quality-actions">
-              <div class="quality-action"><b>Сегодня · клиент</b>Позвонить сейчас: раскрыть сомнение → проверить снятие → предложить вместе открыть условия и подписать сейчас.</div>
-              <div class="quality-action"><b>Сегодня · навык</b>Трижды отрепетировать связку: сомнение → причина → ответ → совместный просмотр → предложение подписи.</div>
+              <div class="quality-action"><b>Сегодня · клиент</b>Передать цитату и таймкод РОПу; согласовать безопасную фразу и сегодня прямо отменить совет брать новый долг.</div>
+              <div class="quality-action"><b>Сегодня · навык</b>До следующего звонка прекратить эту рекомендацию, разобрать фрагмент с РОПом и трижды отрепетировать безопасную замену.</div>
             </div>
           </div>
         </article>
@@ -583,7 +618,7 @@
     </section>
 
     <section id="quiz">
-      <div class="section-head"><div><div class="eyebrow">08 · самопроверка</div><h2>Девять вопросов перед стартом</h2><p>Откройте ответ и проверьте, одинаково ли команда понимает правила.</p></div></div>
+      <div class="section-head"><div><div class="eyebrow">08 · самопроверка</div><h2>Десять вопросов перед стартом</h2><p>Откройте ответ и проверьте, одинаково ли команда понимает правила.</p></div></div>
       <div class="quiz">
         <details><summary>Клиент сказал «ИП никогда не было». Гейт закрыт?</summary><p><b>Да.</b> Явное «нет» — полноценный ответ, а не отсутствие данных.</p></details>
         <details><summary>Клиент назвал только примерные суммы по нескольким долгам. Гейт закрыт?</summary><p><b>Да.</b> Если составляющие не пересекаются, их можно правильно сложить и написать итог «около X». Отдельно подтверждать арифметику и добирать точность до рубля не нужно.</p></details>
@@ -593,7 +628,8 @@
         <details><summary>«Я отправлю договор, посмотрите сами, завтра подпишем» — совместное подписание?</summary><p><b>Нет, это 0.</b> До паузы менеджер должен сделать активную попытку: предложить открыть ссылку сейчас, остаться на линии, вместе пройти «Условия» и договор и предложить подписать сейчас. Явный отказ клиента после полной попытки не обнуляет пункт.</p></details>
         <details><summary>Менеджер предложил точные дату, время и сумму, но клиент хочет подумать. Следующий шаг — 0?</summary><p><b>Нет, это 1.</b> Оценивается полная конкретная попытка менеджера. В причине честно пишем, что клиент отказался фиксировать шаг; договорённость не придумываем.</p></details>
         <details><summary>Следующий шаг входит в 15 гейтов?</summary><p><b>Нет.</b> Он оценивается только во втором примечании. Сумму первого платежа, дату, время и подписание в «Добрать» первого примечания не переносим.</p></details>
-        <details><summary>Клиент ушёл с «я подумаю», а залог недобран. Зачем звонить сейчас?</summary><p><b>Чтобы раскрыть сомнение, а не добрать залог.</b> Главный провал — «Возражения». Если нет жёсткого отказа или запрета на звонок, позвоните сейчас: «Иван, я всё же думаю о нашем разговоре и никак не могу понять, что именно вызывает у вас сомнения. Давайте разберём?»</p></details>
+        <details><summary>Клиент ушёл с «я подумаю», а залог недобран. Зачем звонить сейчас?</summary><p><b>Если СОС: НЕТ — чтобы раскрыть сомнение, а не добрать залог.</b> Главный провал — «Возражения». Если нет жёсткого отказа или запрета на звонок, позвоните сейчас: «Иван, я всё же думаю о нашем разговоре и никак не могу понять, что именно вызывает у вас сомнения. Давайте разберём?»</p></details>
+        <details><summary>Менеджер сказал: «Оформите кредитку, потом долг спишем». Что выводим?</summary><p><b>🆘 СОС: ДА — приоритет №1.</b> Выводим точную цитату и таймкод, но не меняем X/6. Сегодня передаём фрагмент РОПу, быстро согласуем безопасную фразу и только затем связываемся с клиентом, чтобы прямо отменить рекомендацию; менеджер не импровизирует повторно. Вопрос клиента, пересказ или предупреждение «так делать нельзя» не являются СОС.</p></details>
       </div>
     </section>
   </main>
