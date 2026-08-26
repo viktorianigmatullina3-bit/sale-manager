@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Обучение оценке звонка — SALE 100.0</title>
-<meta name="description" content="Полное обучение менеджера: 15 гейтов клиента, семь пунктов качества по шкале 1/0 и обязательный СОС при совете взять новый долг ради списания.">
+<meta name="description" content="Обучение по строгой оценке звонка: JSON и понятные примечания, 15 гейтов, семь критериев 1/0, цель, исход, ред-флаги и сильные примеры.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@500;700;800&amp;family=Golos+Text:wght@400;500;600&amp;display=swap" rel="stylesheet">
@@ -78,6 +78,64 @@
   .format-step p{font-size:12.5px;color:var(--muted);margin-top:5px}
   .format-rule{margin-top:12px;background:var(--green-deep);color:#F7F2E8;border-radius:14px;padding:15px 17px;font-size:14px}
   .format-rule b{color:#F4C775}
+
+  .contract-grid{display:grid;grid-template-columns:minmax(0,.88fr) minmax(0,1.12fr);gap:12px;margin-top:14px;align-items:stretch}
+  .contract-card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:18px;min-width:0}
+  .contract-card h3{font-size:15px}
+  .contract-card>p{margin-top:7px;color:var(--muted);font-size:13px}
+  .contract-flow{display:grid;gap:8px;margin-top:13px}
+  .contract-row{display:grid;grid-template-columns:116px minmax(0,1fr);gap:10px;align-items:start;padding:10px 11px;border-radius:10px;background:var(--green-soft);font-size:12.5px}
+  .contract-row b{font:700 10px "Unbounded";color:var(--green);overflow-wrap:anywhere}
+  .contract-row span{color:var(--muted);overflow-wrap:anywhere}
+  .contract-code{margin-top:12px;border-radius:12px;background:#17251F;color:#EAF3EE;padding:14px 15px;font:500 11.5px/1.6 ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;white-space:pre-wrap;overflow-wrap:anywhere;overflow:auto}
+  .contract-code .code-key{color:#F4C775}
+  .contract-code .code-good{color:#8BC4AA}
+  .contract-code .code-bad{color:#F1A399}
+  .contract-note{margin-top:10px;padding:11px 12px;border-left:4px solid var(--gold);border-radius:0 10px 10px 0;background:var(--gold-soft);color:#614C27;font-size:12.5px}
+  .id-chip{display:inline-flex;align-items:center;max-width:100%;margin-top:6px;border-radius:6px;padding:3px 7px;background:var(--blue-soft);color:var(--blue);font:700 9px/1.35 ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;overflow-wrap:anywhere}
+
+  .data-blocks{display:grid;grid-template-columns:repeat(4,1fr);gap:9px;margin-top:14px}
+  .data-block{background:var(--card);border:1px solid var(--line);border-radius:13px;padding:14px;position:relative}
+  .data-block::before{content:attr(data-step);display:inline-flex;align-items:center;justify-content:center;width:28px;height:24px;border-radius:7px;background:var(--green);color:#fff;font:800 9px "Unbounded"}
+  .data-block h3{font-size:12.5px;margin-top:9px}
+  .data-block p{color:var(--muted);font-size:12px;margin-top:5px}
+
+  .enum-layout{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:14px}
+  .enum-panel{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:18px;min-width:0}
+  .enum-panel h3{font-size:15px}
+  .enum-panel>p{font-size:12.5px;color:var(--muted);margin-top:6px}
+  .enum-list{display:grid;gap:8px;margin-top:13px}
+  .enum-item{padding:11px 12px;border-radius:10px;background:var(--green-soft);border:1px solid rgba(14,92,70,.12)}
+  .enum-item.partial{background:var(--gold-soft);border-color:rgba(194,121,15,.2)}
+  .enum-item.fail{background:var(--red-soft);border-color:rgba(154,45,34,.16)}
+  .enum-item.na{background:var(--blue-soft);border-color:rgba(40,91,122,.18)}
+  .enum-item code{display:block;color:var(--green-deep);font:700 11px ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;overflow-wrap:anywhere}
+  .enum-item.partial code{color:#765512}.enum-item.fail code{color:var(--red)}.enum-item.na code{color:var(--blue)}
+  .enum-item span{display:block;font-size:12px;color:var(--muted);margin-top:4px}
+  .payment-rule{margin-top:12px;padding:14px 15px;border-radius:12px;background:var(--green-deep);color:#F7F2E8;font-size:12.5px}
+  .payment-rule b{color:#F4C775}
+
+  .flag-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:9px;margin-top:14px}
+  .flag-card{background:var(--card);border:1px solid rgba(154,45,34,.2);border-radius:13px;padding:14px;min-width:0}
+  .flag-card.sos{grid-column:1/-1;background:var(--red-soft);border:2px solid var(--red)}
+  .flag-code{display:block;color:var(--red);font:800 10px/1.35 ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;overflow-wrap:anywhere}
+  .flag-card h4{font-size:13px;margin-top:7px}
+  .flag-card p{font-size:12px;color:var(--muted);margin-top:5px}
+  .flag-evidence{display:grid;grid-template-columns:1fr auto;gap:8px;margin-top:9px;padding:9px 10px;border-radius:9px;background:rgba(255,255,255,.72);font-size:11.5px;color:#6F2821}
+  .flag-evidence span:last-child{white-space:nowrap;font-weight:700}
+
+  .strong-wrap{overflow:hidden;border:1px solid var(--line);border-radius:16px;background:var(--card);box-shadow:var(--shadow);margin-top:14px}
+  .strong-table{width:100%;border-collapse:collapse;table-layout:fixed}
+  .strong-table th{padding:11px 13px;background:var(--green-deep);color:#fff;text-align:left;font:700 10px "Unbounded";letter-spacing:.04em;text-transform:uppercase}
+  .strong-table td{padding:13px;vertical-align:top;border-bottom:1px solid var(--line);font-size:12px;color:var(--muted);overflow-wrap:anywhere}
+  .strong-table tbody tr:last-child td{border-bottom:0}
+  .strong-table th:nth-child(1),.strong-table td:nth-child(1){width:23%}
+  .strong-table th:nth-child(2),.strong-table td:nth-child(2){width:42%}
+  .strong-table th:nth-child(3),.strong-table td:nth-child(3){width:14%}
+  .strong-table th:nth-child(4),.strong-table td:nth-child(4){width:21%}
+  .strong-table td b{display:block;color:var(--ink)}
+  .strong-table td code{display:block;margin-top:4px;color:var(--blue);font:700 9.5px ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;overflow-wrap:anywhere}
+  .strong-table blockquote{color:var(--ink)}
 
   .gate-group{margin-top:24px}
   .gate-group-head{display:flex;align-items:center;gap:10px;margin-bottom:10px}
@@ -196,6 +254,10 @@
   .client-summary{padding:14px 16px;background:var(--green-soft);border-top:1px solid rgba(14,92,70,.14);font-size:12.5px;color:#244A3E}
   .client-summary b{display:block;font-family:"Unbounded";font-size:10.5px;letter-spacing:.06em;text-transform:uppercase;color:var(--green);margin-bottom:5px}
   .quality-note .note-body{padding:0;white-space:normal}
+  .quality-classification{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin:12px 16px 0}
+  .quality-classification>div{padding:11px 12px;border:1px solid var(--line);border-radius:10px;background:#FBF8F0;min-width:0}
+  .quality-classification span{display:block;font:700 9.5px "Unbounded";letter-spacing:.05em;text-transform:uppercase;color:var(--muted)}
+  .quality-classification strong{display:block;margin-top:5px;color:var(--green);font:700 11px ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;overflow-wrap:anywhere}
   .quality-score{display:flex;align-items:flex-end;justify-content:space-between;gap:12px;padding:17px 18px;background:var(--gold-soft);border-bottom:1px solid var(--line)}
   .quality-score span{font-family:"Unbounded";font-size:10px;letter-spacing:.09em;text-transform:uppercase;color:#765512}
   .quality-score strong{font:800 clamp(30px,5vw,42px)/1 "Unbounded";color:#765512;white-space:nowrap}
@@ -241,25 +303,37 @@
   @media (max-width:840px){
     .hero-metrics,.type-grid{grid-template-columns:1fr 1fr}
     .format-grid{grid-template-columns:1fr 1fr}
-    .score-total,.example-layout{grid-template-columns:1fr}
+    .score-total,.example-layout,.contract-grid{grid-template-columns:1fr}
     .price-parts{grid-template-columns:1fr}
+    .data-blocks{grid-template-columns:1fr 1fr}
   }
   @media (max-width:680px){
     .wrap{padding:0 17px}
     .topbar{padding-top:14px}
     header{padding-top:34px}
-    .hero-metrics,.two-systems,.gate-grid,.score-grid,.type-grid,.quiz{grid-template-columns:1fr}
+    .hero-metrics,.two-systems,.gate-grid,.score-grid,.type-grid,.quiz,.enum-layout,.flag-grid{grid-template-columns:1fr}
     .score-card.wide{grid-column:auto}
-    .criteria,.stage-cols,.stage-intro,.quality-actions{grid-template-columns:1fr}
+    .criteria,.stage-cols,.stage-intro,.quality-actions,.quality-classification{grid-template-columns:1fr}
     .section-head{display:block}
     .score-legend{grid-template-columns:1fr}
     .sos-policy{grid-template-columns:1fr}
+    .flag-card.sos{grid-column:auto}
+    .strong-table,.strong-table tbody,.strong-table tr,.strong-table td{display:block;width:100%}
+    .strong-table td:nth-child(1),.strong-table td:nth-child(2),.strong-table td:nth-child(3),.strong-table td:nth-child(4){width:100%}
+    .strong-table thead{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+    .strong-table tr{padding:6px 13px}
+    .strong-table tr+tr{border-top:1px solid var(--line)}
+    .strong-table td{display:grid;grid-template-columns:86px minmax(0,1fr);gap:9px;padding:8px 0;border:0}
+    .strong-table td::before{content:attr(data-label);font:700 9px "Unbounded";letter-spacing:.04em;text-transform:uppercase;color:var(--green)}
+    .strong-table td b + code{grid-column:2}
   }
   @media (max-width:420px){
     h1{font-size:36px}
     .metric{padding:14px}
     .format-grid{grid-template-columns:1fr}
+    .data-blocks{grid-template-columns:1fr}
     .gate{padding:15px}
+    .contract-row{grid-template-columns:1fr;gap:4px}
     .client-field{grid-template-columns:1fr;gap:2px}
     .client-group,.client-summary{padding:12px 13px}
     .quality-lines{padding:6px 13px}.sos-status,.quality-focus,.quality-phrase{margin-left:13px;margin-right:13px}.quality-actions{margin-left:13px;margin-right:13px}
@@ -267,7 +341,7 @@
   @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
   @media print{
     body{background:#fff}.wrap{max-width:none}.topbar,.index,.print{display:none!important}
-    header{padding-top:20px}.metric,.gate,.score-card,.stage-body,.note-example,details{box-shadow:none;break-inside:avoid}
+    header{padding-top:20px}.metric,.gate,.score-card,.stage-body,.note-example,.contract-card,.enum-panel,.flag-card,.data-block,.strong-table tr,details{box-shadow:none;break-inside:avoid}
     .example-layout{grid-template-columns:1fr}.client-note,.quality-note{overflow:visible;break-inside:auto}.client-group,.client-dobrat,.client-summary,.sos-policy,.sos-status,.quality-line,.quality-focus,.quality-phrase,.quality-action{break-inside:avoid;-webkit-print-color-adjust:exact;print-color-adjust:exact}
     details>p{display:block!important}
     section{break-before:auto}.gate-grid{display:block}.gate{margin-bottom:10px}
@@ -284,22 +358,24 @@
   <header>
     <div class="kicker">SALE 100.0 · обучение менеджера</div>
     <h1>Как оценивается <span class="hl">звонок</span></h1>
-    <p class="lead">Полный разбор двух примечаний: что нужно узнать о клиенте, какие из семи пунктов качества пройдены, есть ли критический СОС и что менеджер исправляет сразу после звонка.</p>
-    <div class="hero-rule"><b>Главное правило:</b> гейты X/15 показывают, сколько обязательных тем менеджер отработал; качество X/7 — как он провёл продажу. В гейтах 1–13 явное «не знаю» или отказ клиента после прямого вопроса не наказывают менеджера. В пункте качества «Формирование и презентация решения» обязательно именно явное «да» клиента. Показатели не складываются.</div>
+    <p class="lead">Полный разбор двух примечаний и строгого результата для программы: что узнали о клиенте, как менеджер провёл продажу, чем закончилось касание, какие риски найдены и что исправить сегодня.</p>
+    <div class="hero-rule"><b>Главное правило:</b> один анализ даёт два представления одного результата. Программа получает строгий JSON с фиксированными полями и кодами, человек — понятный <code>note_text</code>. Гейты X/15 и качество X/7 не складываются; ред-флаги не подменяют оценку.</div>
     <div class="hero-metrics" aria-label="Ключевые параметры обучения">
-      <div class="metric"><span class="num">15</span><b>обязательных гейтов</b><p>Что менеджер должен спросить или объяснить.</p></div>
-      <div class="metric"><span class="num">X/7</span><b>итог качества</b><p>Каждый пункт получает 1 или 0.</p></div>
-      <div class="metric"><span class="num">1</span><b>главная причина</b><p>Что исправить сегодня; при корректном отказе — без давления.</p></div>
+      <div class="metric"><span class="num">15</span><b>гейтов с причиной</b><p>В оценимом звонке: ID, название, 1/0 и причина.</p></div>
+      <div class="metric"><span class="num">7</span><b>неизменных критериев</b><p>Фиксированные ID, названия и порядок.</p></div>
+      <div class="metric"><span class="num">7</span><b>фиксированных флагов</b><p>Каждый риск — отдельное событие с доказательством.</p></div>
     </div>
     <nav class="index" aria-label="Разделы обучения">
       <a href="#two-notes">Два примечания</a>
-      <a href="#note-format">Формат карточки</a>
+      <a href="#note-format">JSON + примечание</a>
       <a href="#gates">15 гейтов</a>
       <a href="#score">Оценка X/7</a>
-      <a href="#sos">СОС</a>
+      <a href="#touch-result">Цель и исход</a>
+      <a href="#flags">Ред-флаги</a>
       <a href="#focus">Запавший блок</a>
       <a href="#types">Типы звонков</a>
       <a href="#example">Пример</a>
+      <a href="#strong-examples">Сильные примеры</a>
       <a href="#quiz">Самопроверка</a>
     </nav>
   </header>
@@ -314,33 +390,58 @@
           <div class="num">Примечание №1</div>
           <h3>Картина клиента и гейты</h3>
           <p>Отвечает на вопрос: <strong>«Что мы знаем и что осталось добрать?»</strong></p>
-          <ul><li>счётчик «ГЕЙТЫ: X/15» только наверху;</li><li>факты клиента в четырёх понятных блоках;</li><li>один список «Добрать» и краткий итог;</li><li>без служебных статусов, оценки качества и критики менеджера.</li></ul>
+          <ul><li><code>schema_version: client_note_v2</code>;</li><li>для завершённой консультации — ровно 15 объектов с числовыми ID <code>1…15</code>, фиксированным названием, оценкой 1/0 и причиной;</li><li><code>gate_total</code> равен сумме единиц;</li><li><code>note_text</code> — факты клиента, один список «Добрать» и краткий итог без технического шума.</li></ul>
           <a class="prompt-download" href="../docs/prompt-1-client-note-15-gates.md" download>Скачать промт №1 <span>.md</span></a>
         </article>
         <article class="system-card quality">
           <div class="num">Примечание №2</div>
           <h3>Качество продажи</h3>
-          <p>Отвечает на вопрос: <strong>«Как менеджер провёл звонок?»</strong></p>
-          <ul><li>обязательный статус «🆘 СОС: НЕТ/ДА»; при неясном авторе — ручная проверка;</li><li>итог X/7 только для завершённой консультации;</li><li>семь бинарных строк: каждый пункт получает 1 или 0;</li><li>причина сразу в строке и один главный провал;</li><li>правильная фраза и два коротких действия сегодня.</li></ul>
+          <p>Отвечает на вопрос: <strong>«Как менеджер провёл звонок и чем он закончился?»</strong></p>
+          <ul><li><code>schema_version: sales_quality_v3</code>;</li><li>семь критериев с неизменными ID, названиями и порядком;</li><li>отдельные поля «ЦЕЛЬ», «ИСХОД», <code>main_failure</code> и <code>priority_issue</code>;</li><li>семь фиксированных ред-флагов как отдельные события с цитатой и таймкодом;</li><li>сильные примеры и понятный <code>note_text</code> — отдельные блоки.</li></ul>
           <a class="prompt-download" href="../docs/prompt-2-sales-quality.md" download>Скачать промт №2 <span>.md</span></a>
         </article>
       </div>
       <div class="never-sum"><b>Пример:</b> у менеджера может быть 15/15 гейтов и 2/7 за продажу — все обязательные темы отработал, но плохо провёл продажу. Или 12/15 и 6/7 — продавал сильно, но три темы не отработал.</div>
       <div class="never-sum"><b>Источник оценки:</b> оба примечания строятся только по транскрибации полной консультационной сессии. Старые саммари не являются источником. Технический дубль учитывается один раз, но автор реплики не назначается произвольно; при неясной роли нужна ручная проверка.</div>
+      <div class="never-sum"><b>Для интеграции:</b> JSON — источник данных для счётчиков, фильтров и аналитики. <code>note_text</code> — готовое человеческое примечание из тех же фактов. Программа не должна повторно угадывать баллы, цель, исход или флаги из текста.</div>
       <div class="never-sum"><b>«Добрать» — только пробелы 15 гейтов:</b> туда не входят сумма или дата первого платежа за услуги, лестница оплаты, подписание и ориентир времени следующего контакта. Недостающие гейты уточняются по ходу следующего разговора. Если клиент ушёл с нераскрытым «я подумаю», цель звонка сейчас — понять сомнение, а не спросить про залог, имущество или ИП.</div>
     </section>
 
     <section id="note-format">
       <div class="section-head">
-        <div><div class="eyebrow">02 · чистая карточка</div><h2>Как выглядит примечание №1</h2><p>В CRM попадает только понятная картина клиента. Технические статусы ИИ проверяет внутри и не показывает менеджеру.</p></div>
+        <div><div class="eyebrow">02 · один результат в двух видах</div><h2>Prompt №1: JSON + <code>note_text</code></h2><p>Программа получает строгие поля, а менеджер — понятную карточку. Оба представления обязаны говорить одно и то же.</p></div>
       </div>
       <div class="format-grid">
-        <article class="format-step"><span class="step-no">01</span><h3>Счётчик наверху</h3><p>Сразу после заголовка — «ГЕЙТЫ: X/15», где X = 15 минус число открытых гейтов.</p></article>
-        <article class="format-step"><span class="step-no">02</span><h3>Факты по темам</h3><p>Долги, клиент и семья, имущество, решение — каждый блок отдельно.</p></article>
-        <article class="format-step"><span class="step-no">03</span><h3>Один хвост</h3><p>На каждый открытый гейт — один объединённый пункт «Добрать».</p></article>
-        <article class="format-step"><span class="step-no">04</span><h3>Короткий итог</h3><p>Внизу 2–3 предложения: проблема, одно решение и позиция клиента.</p></article>
+        <article class="format-step"><span class="step-no">01</span><h3>Версия схемы</h3><p>Всегда <code>client_note_v2</code>: интеграция знает, какой контракт читает.</p></article>
+        <article class="format-step"><span class="step-no">02</span><h3>Ровно 15 гейтов</h3><p>В оценимом звонке массив содержит числовые ID <code>1…15</code> в фиксированном порядке.</p></article>
+        <article class="format-step"><span class="step-no">03</span><h3>У каждого 1/0 и причина</h3><p><code>score</code> только 1 или 0; <code>reason</code> сразу объясняет результат.</p></article>
+        <article class="format-step"><span class="step-no">04</span><h3>Человеческий текст</h3><p><code>note_text</code> показывает счётчик, факты, «Добрать» и краткий итог.</p></article>
       </div>
-      <div class="format-rule"><b>Обязательная арифметика:</b> 14/15 = ровно один пункт «Добрать», 12/15 = три, 15/15 = «нет» без маркера списка. Несколько пробелов одного гейта объединяются в один пункт. <b>Если клиент не знает или отказывается отвечать:</b> в гейтах 1–13 засчитываем только заданную часть; остальные части составного гейта проверяем отдельно. Понятные приблизительные значения и периоды нормальны. Для гейтов 14–15 обязательны реальные действия менеджера. Закрытый гейт в «Добрать» не выводим; явное «нет» отключает зависимые вопросы.</div>
+      <div class="contract-grid">
+        <article class="contract-card">
+          <h3>Что читает программа</h3>
+          <p>Верхний объект содержит только <code>schema_version</code>, <code>call_type</code>, <code>gate_total</code>, <code>gates</code> и <code>note_text</code>. Названия и ID не переименовываются; сумма пятнадцати <code>score</code> совпадает с <code>gate_total</code>.</p>
+          <pre class="contract-code" aria-label="Один из пятнадцати объектов gates"><code>{
+  "id": 10,
+  "label": "Сделки за три года",
+  "score": 0,
+  "reason": "Не спросил о сделках клиента за три года"
+}</code></pre>
+          <div class="contract-note"><b>Это один объект из массива:</b> в <code>COMPLETED_CONSULTATION</code> таких объектов ровно 15 — с ID от 1 до 15 и четырьмя полями в каждом.</div>
+        </article>
+        <article class="contract-card">
+          <h3>Что читает менеджер</h3>
+          <p><code>note_text</code> не показывает JSON, но сохраняет тот же результат без расхождений.</p>
+          <div class="contract-flow">
+            <div class="contract-row"><b>ГЕЙТЫ: 14/15</b><span>Счётчик наверху равен <code>gate_total</code>.</span></div>
+            <div class="contract-row"><b>ФАКТЫ</b><span>Долги, клиент и семья, имущество, решение — каждый блок отдельно.</span></div>
+            <div class="contract-row"><b>⚠ ДОБРАТЬ</b><span>Один объединённый пункт на каждый гейт со <code>score: 0</code>.</span></div>
+            <div class="contract-row"><b>КРАТКИЙ ИТОГ</b><span>Проблема, одно решение и позиция клиента — без технических кодов.</span></div>
+          </div>
+          <div class="contract-note"><b>Неоценимый тип:</b> <code>gate_total: null</code>, <code>gates: []</code> и <code>note_text: ""</code>. Нельзя создавать неполный массив из трёх, десяти или четырнадцати объектов.</div>
+        </article>
+      </div>
+      <div class="format-rule"><b>Обязательная арифметика:</b> в оценимом звонке всегда 15 объектов; <code>gate_total</code> = количество единиц. В <code>note_text</code> 14/15 = ровно один пункт «Добрать», 12/15 = три, 15/15 = «нет». <b>Если клиент не знает или отказывается отвечать:</b> в гейтах 1–13 засчитываем только заданную часть; остальные части составного гейта проверяем отдельно. Понятные приблизительные значения нормальны. Для гейтов 14–15 обязательны реальные действия менеджера.</div>
     </section>
 
     <section id="gates">
@@ -450,7 +551,7 @@
 
     <section id="score">
       <div class="section-head">
-        <div><div class="eyebrow">04 · примечание №2</div><h2>Как складывается итог X/7</h2><p>Оцениваем смысл живого диалога, а не ритуальные слова. Однозначный ближайший контекст засчитывается без формального повторения; молчание и догадки — нет.</p></div>
+        <div><div class="eyebrow">04 · примечание №2</div><h2>Семь фиксированных критериев</h2><p>ID, русское название и порядок неизменны. Оцениваем смысл живого диалога, а не ритуальные слова: каждый критерий получает только 1 или 0 и свою причину.</p></div>
       </div>
       <div class="score-total">
         <div class="score-board">
@@ -458,44 +559,55 @@
           <h3>Семь бинарных строк</h3>
           <p>Каждый пункт получает только 1 или 0. Если не выполнено хотя бы одно обязательное условие — пункт получает 0.</p>
           <div class="score-bar" role="img" aria-label="Семь равных бинарных пунктов качества, каждый оценивается единицей или нулём"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
-          <div class="score-legend"><span>Эмпатия · 1/0</span><span>Боль · 1/0</span><span>Решение · 1/0</span><span>Возражения · 1/0</span><span>Презентация цены · 1/0</span><span>Подписание · 1/0</span><span>Следующий шаг · 1/0</span></div>
+          <div class="score-legend"><span>empathy · 1/0</span><span>pain_quantification · 1/0</span><span>solution_presentation · 1/0</span><span>objections · 1/0</span><span>price_presentation · 1/0</span><span>joint_signing · 1/0</span><span>next_step · 1/0</span></div>
         </div>
         <div class="score-note">
           <h3>Когда итог X/7 не ставится</h3>
-          <ul><li><strong>Setter:</strong> это квалификация, а не продажа клоузера.</li><li><strong>Partial:</strong> консультация продолжается или запись оборвана.</li><li><strong>Дожим:</strong> отдельный короткий формат.</li><li><strong>Жёсткий отказ:</strong> проверяется корректность завершения.</li><li><strong>Ненадёжная запись:</strong> ручная проверка без последствий.</li></ul>
+          <ul><li><strong>QUALIFICATION:</strong> квалификация, а не продажа клоузера.</li><li><strong>SESSION_CONTINUES:</strong> консультация продолжается или запись оборвана.</li><li><strong>FOLLOW_UP:</strong> отдельный короткий формат дожима.</li><li><strong>HARD_REFUSAL:</strong> проверяется корректность завершения.</li><li><strong>MANUAL_REVIEW:</strong> ручная проверка без последствий.</li></ul>
         </div>
       </div>
 
-      <aside class="sos-policy" id="sos" aria-labelledby="sos-title">
-        <div class="sos-icon" aria-hidden="true">🆘</div>
-        <div>
-          <h3 id="sos-title">СОС · новый долг ради списания</h3>
-          <p><b>Это отдельная обязательная проверка вне семи пунктов и поверх X/7.</b> СОС: ДА ставится, только когда менеджер предлагает или одобряет новый кредит, кредитку, займ в МФО, увеличение либо использование кредитного лимита <b>именно с расчётом потом не платить или списать этот новый долг</b>.</p>
-          <ul><li><b>СОС: ДА:</b> есть оба факта — новый долг и подтверждённая цель его невозврата/списания.</li><li><b>СОС: НЕТ:</b> менеджер спрашивает про существующие долги, предупреждает «так делать нельзя», обсуждает обычное рефинансирование с намерением исполнять новый договор или клиент сам высказал идею без одобрения менеджера.</li><li><b>Неясен автор:</b> ручная проверка с цитатой — без обвинения менеджера.</li><li><b>При СОС: ДА:</b> точная цитата и таймкод, приоритет №1, исправление клиенту и разбор с РОПом сегодня. Итог X/7 при этом не меняется.</li></ul>
-          <div class="sos-output"><b>Как видно в примечании:</b><br>🆘 СОС: ДА — НОВЫЙ ДОЛГ РАДИ СПИСАНИЯ<br>Цитата менеджера: «Оформите кредитку, используйте лимит, а потом этот долг спишем» [12:41].<br>Что произошло: менеджер предложил новый долг с расчётом на его последующее списание.</div>
-        </div>
-      </aside>
+      <div class="contract-grid">
+        <article class="contract-card">
+          <h3>Правило <code>main_failure</code></h3>
+          <p>Это ссылка только на один из семи критериев со <code>score: 0</code>. Нельзя записывать туда СОС, другой ред-флаг, свободный текст или критерий с единицей.</p>
+          <div class="contract-flow">
+            <div class="contract-row"><b>ЕСТЬ НУЛИ</b><span>В примечании: <code>ПУНКТ: objections</code>. В JSON <code>criterion_id</code> ссылается на один нулевой критерий.</span></div>
+            <div class="contract-row"><b>7/7</b><span><code>main_failure: null</code>.</span></div>
+            <div class="contract-row"><b>7/7 + СОС</b><span><code>main_failure: null</code>; опасное событие находится отдельно в <code>priority_issue</code>.</span></div>
+          </div>
+        </article>
+        <article class="contract-card">
+          <h3>Как не сломать аналитику</h3>
+          <p>Нельзя менять ID, сокращать русское название, переставлять строки или добавлять восьмой критерий.</p>
+          <div class="contract-flow">
+            <div class="contract-row"><b>total.earned</b><span>Количество единиц в семи объектах.</span></div>
+            <div class="contract-row"><b>criterion_id</b><span>Один из семи кодов ниже — без синонимов.</span></div>
+            <div class="contract-row"><b>reason</b><span>Почему именно этот критерий получил 1 или 0; все нарушения критерия — здесь.</span></div>
+          </div>
+        </article>
+      </div>
 
       <div class="score-grid">
         <article class="score-card">
-          <div class="score-card-head"><div class="weight">1</div><div><h3>Эмпатия</h3><p class="desc">Контакт, слушание и человеческий разговор.</p></div></div>
+          <div class="score-card-head"><div class="weight">1</div><div><h3>Эмпатия</h3><span class="id-chip">empathy</span><p class="desc">Контакт, слушание и человеческий разговор.</p></div></div>
           <ul class="checklist"><li><b>1:</b> выполнены все обязательные применимые условия.</li><li>тёплое начало и разрешение на разговор;</li><li>слушал и не перебивал;</li><li>принял выраженную эмоцию, не обесценил; если эмоции не было — этот подпункт неприменим;</li><li>говорил понятно, по-человечески и без давления;</li><li>резюмировал ситуацию и проверил понимание.</li><li><b>0:</b> хотя бы одно применимое условие не выполнено.</li></ul>
         </article>
         <article class="score-card">
-          <div class="score-card-head"><div class="weight">1</div><div><h3>Оцифровка боли</h3><p class="desc">Связал цифры клиента с личным последствием.</p></div></div>
+          <div class="score-card-head"><div class="weight">1</div><div><h3>Оцифровка боли</h3><span class="id-chip">pain_quantification</span><p class="desc">Связал цифры клиента с личным последствием.</p></div></div>
           <ul class="checklist"><li><b>1:</b> текущий платёж/потеря + конкретное последствие.</li><li><b>0:</b> только «большая переплата» или предложенный будущий платёж.</li></ul>
         </article>
         <article class="score-card">
-          <div class="score-card-head"><div class="weight">1</div><div><h3>Формирование и презентация решения</h3><p class="desc">Решение выросло из болей, и клиент сам сказал: «Да, хочу».</p></div></div>
+          <div class="score-card-head"><div class="weight">1</div><div><h3>Формирование и презентация решения</h3><span class="id-chip">solution_presentation</span><p class="desc">Решение выросло из болей, а клиент явно подтвердил выбор.</p></div></div>
           <ul class="checklist"><li><b>1:</b> выполнены все четыре условия:</li><li>названо одно ясное решение из фактов диагностики;</li><li>оно связано с каждой главной болью клиента;</li><li>понятно, что изменится, что клиент получит и от чего избавится;</li><li>клиент явно сказал «подходит», «хочу», «готов», «давайте оформлять» или однозначно подтвердил выбор. Это может быть самостоятельное «да»; если его нет, менеджер обязан прямо спросить.</li><li><b>0:</b> пропущено любое условие; «понятно», молчание или переход к цене не считаются согласием. Прямой отказ после полной презентации тоже даёт 0, но не считается пропуском менеджера.</li></ul>
           <div class="benefit-example"><b>Рабочая фраза:</b> «Вы сказали, что главное для вас — снизить платёж и прекратить звонки. Поэтому вам подходит РДГ: она фиксирует долг и делает нагрузку посильной. Это решение закрывает вашу задачу? Хотите двигаться дальше?»</div>
         </article>
         <article class="score-card">
-          <div class="score-card-head"><div class="weight">1</div><div><h3>Возражения</h3><p class="desc">Не спорил — понял причину и проверил результат.</p></div></div>
+          <div class="score-card-head"><div class="weight">1</div><div><h3>Возражения</h3><span class="id-chip">objections</span><p class="desc">Не спорил — понял причину и проверил результат.</p></div></div>
           <ul class="checklist"><li><b>1:</b> по каждому возражению выполнены все доступные действия:</li><li>уважительно принял эмоцию или нейтральную позицию;</li><li>уточнил настоящую причину;</li><li>дал релевантный ответ;</li><li>проверил, снят ли вопрос.</li><li>«Я подумаю» — не отказ объяснить причину: менеджер обязан спросить.</li><li>Если клиент после прямого вопроса отказался раскрывать причину, не требуем её выдумать — фиксируем отказ и засчитываем попытку.</li><li>Если возражений нет — менеджер спросил о сомнениях либо клиент сам ясно сказал, что его ничего не смущает.</li><li><b>0:</b> менеджер пропустил доступное действие.</li></ul>
         </article>
         <article class="score-card wide">
-          <div class="score-card-head"><div class="weight">1</div><div><h3>Презентация цены</h3><p class="desc">Один бинарный пункт: все четыре условия выполнены — 1, любое нарушение — 0.</p></div></div>
+          <div class="score-card-head"><div class="weight">1</div><div><h3>Презентация цены</h3><span class="id-chip">price_presentation</span><p class="desc">Один бинарный пункт: все четыре условия выполнены — 1, любое нарушение — 0.</p></div></div>
           <div class="price-parts">
             <div class="price-part"><div class="pp">обязательно</div><h4>1 · Денежная выгода</h4><p>На подтверждённых сопоставимых цифрах назвал экономию в месяц и, когда применимо, за год.</p></div>
             <div class="price-part"><div class="pp">обязательно</div><h4>2 · Выгода по боли</h4><p>Связал цену с результатом: за что клиент платит, от чего избавится или что уменьшится и что получит. В одном непрерывном блоке повторять формулировку не нужно.</p></div>
@@ -507,52 +619,130 @@
           <div class="guard"><b>Строго:</b> отказ может звучать как «полную сумму не смогу» — слово «нет» не обязательно. Но «полный платёж смогу вечером/в пятницу» означает принятие первой ступени. Нельзя начинать сразу с части или даты и спускаться ниже без смыслового отказа. Если клиент после прямого вопроса не готов назвать дату, это не пропуск менеджера. Любое нарушение обнуляет всю презентацию цены.</div>
         </article>
         <article class="score-card wide">
-          <div class="score-card-head"><div class="weight">1</div><div><h3>Совместное подписание договора</h3><p class="desc">Критический отдельный пункт: другой ноль или незакрытый гейт не обнуляют его автоматически.</p></div></div>
+          <div class="score-card-head"><div class="weight">1</div><div><h3>Совместное подписание</h3><span class="id-chip">joint_signing</span><p class="desc">Критический отдельный пункт: другой ноль или незакрытый гейт не обнуляют его автоматически.</p></div></div>
           <ul class="checklist"><li><b>1.</b> После диагностики и презентации предложил открыть ссылку сейчас и остаться на линии.</li><li><b>2.</b> Предложил вместе пройти «Условия» и договор, ответить на вопросы и проверить понимание.</li><li><b>3.</b> Прямо предложил подписать сейчас, если всё понятно.</li><li><b>4.</b> Если клиент открыл ссылку — реально провёл всю цепочку до предложения подписи на странице «Условия».</li><li><b>5.</b> Если клиент захотел подумать — раскрыл барьер, ответил, проверил снятие и повторил активное предложение.</li><li><b>Результат 1:</b> менеджер выполнил все доступные действия; явный отказ клиента после полной попытки не обнуляет пункт. <b>Результат 0:</b> хотя бы одно доступное действие пропущено.</li></ul>
           <div class="benefit-example"><b>Рабочая фраза:</b> «Иван, я понимаю, что решение важное. Давайте перед тем, как вы уйдёте думать, прямо сейчас вместе ещё раз откроем условия и договор — я останусь на линии и отвечу на вопросы. Если всё понятно, предлагаю подписать сейчас. Открыли ссылку?»</div>
           <div class="guard"><b>Никаких частичных результатов:</b> «я отправлю договор, посмотрите сами, а завтра подпишем», остановка после первого «я подумаю» или давление до диагностики дают 0. Если клиент согласился открыть ссылку, но менеджер не провёл его до «Условий» и предложения подписи, тоже 0. Следующий шаг оценивается отдельно.</div>
         </article>
         <article class="score-card wide">
-          <div class="score-card-head"><div class="weight">1</div><div><h3>Следующий шаг</h3><p class="desc">Отдельный пункт только оценки качества — не гейт.</p></div></div>
+          <div class="score-card-head"><div class="weight">1</div><div><h3>Следующий шаг</h3><span class="id-chip">next_step</span><p class="desc">Отдельный пункт только оценки качества — не гейт.</p></div></div>
           <ul class="checklist"><li><b>1:</b> понятно, кто, что и зачем делает дальше; есть дата и, для звонка/встречи, ориентир времени.</li><li>«Завтра часам к девяти», «около 10» и «в районе 10–11» подходят. Точная минута и одна фиксированная точка не нужны; окно не заменяет дату и цель. Наследуем контекст только соседнего обмена о том же действии.</li><li>Если следующий шаг — звонок за решением или для совместной оплаты, сумму первого платежа не требуем. Для самой оплаты сумма нужна, но единственную уже названную сумму повторять не обязательно.</li><li>Если клиент отказался фиксировать шаг после полной попытки, пункт всё равно получает 1; отказ не выдаём за договорённость.</li><li><b>0:</b> не названа цель, не ясно, кто действует, нет применимой даты/ориентира или осталось только «созвонимся».</li></ul>
+        </article>
+      </div>
+    </section>
+
+    <section id="touch-result">
+      <div class="section-head">
+        <div><div class="eyebrow">05 · чем закончилось касание</div><h2>Цель и исход — два фиксированных поля</h2><p>Здесь нет свободных формулировок. Цель показывает степень достижения задачи касания, исход — категорию результата для отчёта.</p></div>
+      </div>
+      <div class="enum-layout">
+        <article class="enum-panel">
+          <h3>ЦЕЛЬ · <code>goal.status</code></h3>
+          <p>В JSON записывается одно точное русское значение — без отдельного английского кода и без синонимов.</p>
+          <div class="enum-list">
+            <div class="enum-item"><code>ДОСТИГНУТА</code><span>Клиент оплатил либо дал конкретное обещание оплаты одновременно с суммой и датой.</span></div>
+            <div class="enum-item partial"><code>ЧАСТИЧНО</code><span>Есть подтверждённое клиентом полезное продвижение, но нет оплаты и нет обещания «сумма + дата».</span></div>
+            <div class="enum-item fail"><code>НЕ_ДОСТИГНУТА</code><span>Подтверждённого результата нет.</span></div>
+            <div class="enum-item na"><code>null</code><span>Только для неоценимого типа. Новое enum-значение вроде «НЕПРИМЕНИМА» придумывать нельзя.</span></div>
+          </div>
+        </article>
+        <article class="enum-panel">
+          <h3>ИСХОД · <code>outcome.status</code></h3>
+          <p>Ровно четыре точных русских значения. Исход описывает фактически случившееся действие и не дублирует цель.</p>
+          <div class="enum-list">
+            <div class="enum-item"><code>ШАГ_ВЫПОЛНЕН</code><span>Действие реально состоялось: например, оплата, подписание или передача.</span></div>
+            <div class="enum-item partial"><code>ЕСТЬ_ПРОДВИЖЕНИЕ</code><span>Есть конкретный подтверждённый шаг или обязательство, но действие ещё не выполнено.</span></div>
+            <div class="enum-item fail"><code>БЕЗ_РЕЗУЛЬТАТА</code><span>Нового результата или договорённости нет.</span></div>
+            <div class="enum-item na"><code>НЕ_ТРЕБОВАЛСЯ</code><span>Сервис, недозвон или ручная проверка, где результат касания не оценивается.</span></div>
+          </div>
+        </article>
+      </div>
+      <div class="payment-rule"><b>Цель и исход не склеиваются:</b> факт оплаты → цель <code>ДОСТИГНУТА</code> и исход <code>ШАГ_ВЫПОЛНЕН</code>. Конкретное обещание оплатить с суммой и датой → цель уже <code>ДОСТИГНУТА</code>, но исход ещё <code>ЕСТЬ_ПРОДВИЖЕНИЕ</code>. «Оплачу позже» без суммы или даты не достигает цели. Допустима и пара <code>ЧАСТИЧНО</code> + <code>ШАГ_ВЫПОЛНЕН</code>, если клиент выполнил полезное действие, но главная цель касания не достигнута.</div>
+      <div class="data-blocks" aria-label="Путь определения цели и исхода">
+        <article class="data-block" data-step="01"><h3>Назвали цель касания</h3><p>Не подменяем её тем, что случайно произошло в разговоре.</p></article>
+        <article class="data-block" data-step="02"><h3>Проверили факт</h3><p>Оплата, обещание сумма + дата или другое подтверждённое действие.</p></article>
+        <article class="data-block" data-step="03"><h3>Выбрали статус цели</h3><p>Только <code>ДОСТИГНУТА</code>, <code>ЧАСТИЧНО</code>, <code>НЕ_ДОСТИГНУТА</code> либо <code>null</code>.</p></article>
+        <article class="data-block" data-step="04"><h3>Записали исход</h3><p>Один из четырёх кодов, без свободного пятого варианта.</p></article>
+      </div>
+    </section>
+
+    <section id="flags">
+      <div class="section-head">
+        <div><div class="eyebrow">06 · контроль риска</div><h2>Семь ред-флагов — отдельные события</h2><p>Ред-флаг не прячется в причине критерия и не меняет X/7. Каждое подтверждённое событие содержит ровно один фиксированный код, точную цитату менеджера и таймкод.</p></div>
+      </div>
+      <div class="flag-grid">
+        <article class="flag-card sos">
+          <span class="flag-code">НОВЫЙ_ДОЛГ_РАДИ_СПИСАНИЯ</span>
+          <h4>Единственный флаг, из которого выводится СОС</h4>
+          <p>Менеджер предложил или одобрил новый кредит, кредитку, займ, увеличение либо использование лимита именно с расчётом не возвращать или списать этот новый долг. Обсуждение существующего долга, предупреждение «так нельзя» и идея клиента без одобрения менеджера не являются событием.</p>
+          <div class="flag-evidence"><span>«Оформите кредитку, используйте лимит, а потом этот долг спишем»</span><span>12:41</span></div>
+        </article>
+        <article class="flag-card"><span class="flag-code">ГРУБОСТЬ</span><h4>Унижающая или оскорбительная реплика</h4><p>Фиксируется по словам менеджера, а не по общему впечатлению от разговора.</p></article>
+        <article class="flag-card"><span class="flag-code">МАТ</span><h4>Нецензурная речь менеджера</h4><p>Нужен подтверждённый автор реплики и фрагмент, в котором это произошло.</p></article>
+        <article class="flag-card"><span class="flag-code">ИГНОР_ПРОСЬБЫ</span><h4>Явную просьбу клиента проигнорировали</h4><p>Например, продолжили действовать вопреки прямо названному времени, каналу или способу связи.</p></article>
+        <article class="flag-card"><span class="flag-code">ДАВЛЕНИЕ_ПОСЛЕ_ОТКАЗА</span><h4>Продолжили давить после ясного отказа</h4><p>Не путать с корректным уточняющим вопросом до того, как клиент однозначно прекратил обсуждение.</p></article>
+        <article class="flag-card"><span class="flag-code">ОБЕЩАНИЕ_СКРЫТЬ_ПРОЦЕДУРУ_ИЛИ_ДОЛГИ</span><h4>Обещали скрыть от близких</h4><p>Менеджер утверждает, что процедуру или долги можно скрыть от родственников либо супруга/супруги.</p></article>
+        <article class="flag-card"><span class="flag-code">ЗАПУГИВАНИЕ</span><h4>Страх используют как давление</h4><p>Угрозы и страшилки ради принуждения к решению, а не спокойное объяснение подтверждённого риска.</p></article>
+      </div>
+      <div class="contract-grid">
+        <article class="contract-card">
+          <h3>Формат каждого события</h3>
+          <pre class="contract-code" aria-label="JSON события ред-флага"><code>{
+  "code": "НОВЫЙ_ДОЛГ_РАДИ_СПИСАНИЯ",
+  "quote": "Оформите кредитку… потом спишем",
+  "timestamp": "12:41",
+  "reason": "Новый кредит связан со списанием"
+}</code></pre>
+          <div class="sos-output"><b>В <code>note_text</code> — четыре строки:</b><br>КОД: НОВЫЙ_ДОЛГ_РАДИ_СПИСАНИЯ<br>ЦИТАТА: «Оформите кредитку… потом спишем»<br>ТАЙМИНГ: 12:41<br>ПРИЧИНА: новый кредит связан со списанием.</div>
+          <div class="contract-note">Нет точной цитаты или нельзя установить, что говорил менеджер, — не создавайте подтверждённый флаг. Передайте фрагмент на ручную проверку.</div>
+        </article>
+        <article class="contract-card">
+          <h3>Как работает СОС</h3>
+          <div class="contract-flow">
+            <div class="contract-row"><b>СОС: ДА</b><span>В <code>risk_events</code> есть подтверждённый код <code>НОВЫЙ_ДОЛГ_РАДИ_СПИСАНИЯ</code>.</span></div>
+            <div class="contract-row"><b>СОС: НЕТ</b><span>Такого подтверждённого события нет. Отдельное поле СОС не угадывается и не хранится вторым источником.</span></div>
+            <div class="contract-row"><b>priority_issue</b><span><code>{"kind":"RISK_EVENT","ref":"НОВЫЙ_ДОЛГ_РАДИ_СПИСАНИЯ"}</code>.</span></div>
+            <div class="contract-row"><b>main_failure</b><span>Остаётся ID одного нулевого критерия; при 7/7 остаётся <code>null</code>, даже если СОС: ДА.</span></div>
+          </div>
         </article>
       </div>
     </section>
 
     <section id="focus">
       <div class="section-head">
-        <div><div class="eyebrow">05 · где западает звонок</div><h2>Если СОС: НЕТ — западает один из семи пунктов</h2><p>СОС находится вне семи пунктов и не получает балл. При СОС: ДА он становится главным провалом независимо от X/7; семь строк всё равно оцениваются.</p></div>
+        <div><div class="eyebrow">07 · где западает звонок</div><h2><code>main_failure</code> — один нулевой критерий</h2><p>Ред-флаги и СОС находятся отдельно. Они могут стать срочным <code>priority_issue</code>, но никогда не подменяют <code>main_failure</code>.</p></div>
       </div>
       <div class="stage-intro">
-        <div class="stage-rule"><b>Обычный выбор при СОС: НЕТ</b>Эмпатия · Оцифровка боли · Формирование решения · Возражения · Презентация цены · Подписание · Следующий шаг.</div>
-        <div class="stage-rule"><b>Одна главная причина</b>Пропуск менеджера → исправление сегодня. Корректная презентация и прямой отказ клиента → нейтральная фиксация без давления.</div>
+        <div class="stage-rule"><b>Выбор только среди нулей</b>Значение <code>criterion_id</code> обязано ссылаться на одну из семи строк с <code>score: 0</code>.</div>
+        <div class="stage-rule"><b>При 7/7</b><code>main_failure: null</code>. Если одновременно найден ред-флаг, он остаётся отдельным приоритетом и не создаёт фиктивный ноль.</div>
       </div>
       <div class="stages">
-        <article class="stage"><div class="stage-no">1</div><div class="stage-body"><div class="stage-title"><h3>Эмпатия</h3></div><p class="stage-goal">Западает, если разговор холодный, менеджер перебивает, обесценивает или не резюмирует ситуацию клиента.</p></div></article>
-        <article class="stage"><div class="stage-no">2</div><div class="stage-body"><div class="stage-title"><h3>Оцифровка боли</h3></div><p class="stage-goal">Западает, если нет подтверждённой денежной потери и её связи с личным последствием клиента.</p></div></article>
-        <article class="stage"><div class="stage-no">3</div><div class="stage-body"><div class="stage-title"><h3>Формирование и презентация решения</h3><span class="required">нужно «да, хочу»</span></div><p class="stage-goal">Западает, если нет одного решения из диагностики, связи с главными болями, понятного результата или явного согласия. Самостоятельное «да» подходит; если его нет, менеджер должен прямо спросить.</p></div></article>
-        <article class="stage"><div class="stage-no">4</div><div class="stage-body"><div class="stage-title"><h3>Возражения</h3><span class="required">приоритет при неснятом сомнении</span></div><p class="stage-goal">Западает, если решение уже полноценно представлено, но менеджер не раскрыл актуальное сомнение, ответил шаблонно или не проверил снятие. Если решение вообще не сформировано, первопричина — пункт 3.</p></div></article>
-        <article class="stage"><div class="stage-no">5</div><div class="stage-body"><div class="stage-title"><h3>Презентация цены</h3><span class="required">лестница оплаты</span></div><p class="stage-goal">Западает, если менеджер не показал выгоду/цену или нарушил лестницу: полный платёж/VIP; только после отказа — часть сегодня; только после отказа от части — прямой вопрос о точной дате. Первый принятый вариант завершает лестницу.</p></div></article>
-        <article class="stage must"><div class="stage-no">6</div><div class="stage-body"><div class="stage-title"><h3>Совместное подписание договора</h3><span class="required">отдельный пункт</span></div><p class="stage-goal">Западает, если менеджер не сделал полную активную попытку прямо сейчас вместе открыть ссылку, пройти «Условия» и предложить подписание. Явный отказ клиента после полной попытки не считается ошибкой менеджера.</p></div></article>
-        <article class="stage"><div class="stage-no">7</div><div class="stage-body"><div class="stage-title"><h3>Следующий шаг</h3></div><p class="stage-goal">Западает, если неясно, кто, что и зачем делает дальше; для звонка/встречи нет даты или ориентира времени; для самой оплаты нет суммы или даты. «Часам к девяти» и «в районе 10–11» подходят.</p></div></article>
+        <article class="stage"><div class="stage-no">1</div><div class="stage-body"><div class="stage-title"><h3>Эмпатия</h3><span class="id-chip">empathy</span></div><p class="stage-goal">Западает, если разговор холодный, менеджер перебивает, обесценивает или не резюмирует ситуацию клиента.</p></div></article>
+        <article class="stage"><div class="stage-no">2</div><div class="stage-body"><div class="stage-title"><h3>Оцифровка боли</h3><span class="id-chip">pain_quantification</span></div><p class="stage-goal">Западает, если нет подтверждённой денежной потери и её связи с личным последствием клиента.</p></div></article>
+        <article class="stage"><div class="stage-no">3</div><div class="stage-body"><div class="stage-title"><h3>Формирование и презентация решения</h3><span class="id-chip">solution_presentation</span><span class="required">нужно «да, хочу»</span></div><p class="stage-goal">Западает, если нет одного решения из диагностики, связи с главными болями, понятного результата или явного согласия клиента. Самостоятельное «да» подходит; если его нет, менеджер обязан прямо спросить.</p></div></article>
+        <article class="stage"><div class="stage-no">4</div><div class="stage-body"><div class="stage-title"><h3>Возражения</h3><span class="id-chip">objections</span><span class="required">приоритет при неснятом сомнении</span></div><p class="stage-goal">Западает, если решение уже полноценно представлено, но менеджер не раскрыл актуальное сомнение, ответил шаблонно или не проверил снятие. Если решение вообще не сформировано, первопричина — пункт 3.</p></div></article>
+        <article class="stage"><div class="stage-no">5</div><div class="stage-body"><div class="stage-title"><h3>Презентация цены</h3><span class="id-chip">price_presentation</span><span class="required">лестница оплаты</span></div><p class="stage-goal">Западает, если менеджер не показал выгоду/цену или нарушил лестницу: полный платёж/VIP; только после отказа — часть сегодня; только после отказа от части — прямой вопрос о точной дате. Первый принятый вариант завершает лестницу.</p></div></article>
+        <article class="stage must"><div class="stage-no">6</div><div class="stage-body"><div class="stage-title"><h3>Совместное подписание</h3><span class="id-chip">joint_signing</span><span class="required">отдельный пункт</span></div><p class="stage-goal">Западает, если менеджер не сделал полную активную попытку прямо сейчас вместе открыть ссылку, пройти «Условия» и предложить подписание. Явный отказ клиента после полной попытки не считается ошибкой менеджера.</p></div></article>
+        <article class="stage"><div class="stage-no">7</div><div class="stage-body"><div class="stage-title"><h3>Следующий шаг</h3><span class="id-chip">next_step</span></div><p class="stage-goal">Западает, если неясно, кто, что и зачем делает дальше; для звонка/встречи нет даты или ориентира времени; для самой оплаты нет суммы или даты. «Часам к девяти» и «в районе 10–11» подходят.</p></div></article>
       </div>
     </section>
 
     <section id="types">
-      <div class="section-head"><div><div class="eyebrow">06 · оцениваем справедливо</div><h2>Не каждый файл получает итог X/7</h2><p>Тип звонка определяется до оценки, чтобы помощника не оценивать как клоузера, а обрыв — как законченную консультацию.</p></div></div>
+      <div class="section-head"><div><div class="eyebrow">08 · оцениваем справедливо</div><h2>Не каждый файл получает итог X/7</h2><p>Тип звонка определяется до оценки, чтобы помощника не оценивать как клоузера, а обрыв — как законченную консультацию.</p></div></div>
       <div class="type-grid">
-        <div class="type-card"><h3>Consultation</h3><p>Вся консультационная сессия завершена.</p><span class="result">15 гейтов + итог X/7</span></div>
-        <div class="type-card"><h3>Partial</h3><p>Оборвана или прямо прервана незавершённая консультация. Обычный следующий шаг после завершённого звонка — не Partial.</p><span class="result">Без итога X/7</span></div>
-        <div class="type-card"><h3>Setter</h3><p>Квалификация и передача эксперту.</p><span class="result">Без оценки клоузера</span></div>
-        <div class="type-card"><h3>Дожим</h3><p>Повторный звонок после консультации.</p><span class="result">Совместное подписание · возражение · шаг</span></div>
-        <div class="type-card"><h3>Жёсткий отказ</h3><p>«Не звоните/закройте заявку» до завершения консультации. Если консультация к этому моменту уже завершена — оцениваем её целиком и соблюдаем запрет.</p><span class="result">Корректность завершения</span></div>
-        <div class="type-card"><h3>Недозвон / сервис</h3><p>Нет продажи для оценки.</p><span class="result">Примечание не создаётся</span></div>
+        <div class="type-card"><h3>Завершённая консультация</h3><span class="id-chip">COMPLETED_CONSULTATION</span><p>Содержательная консультационная сессия завершена.</p><span class="result">Все 7 критериев</span></div>
+        <div class="type-card"><h3>Дожим</h3><span class="id-chip">FOLLOW_UP</span><p>Повторное касание после консультации.</p><span class="result">Возражения · подписание · шаг</span></div>
+        <div class="type-card"><h3>Квалификация</h3><span class="id-chip">QUALIFICATION</span><p>Первичная квалификация и передача эксперту.</p><span class="result">Без оценки клоузера</span></div>
+        <div class="type-card"><h3>Сессия продолжается</h3><span class="id-chip">SESSION_CONTINUES</span><p>Запись оборвана или консультация прямо не завершена. Обычный следующий шаг после полного звонка сюда не относится.</p><span class="result">Без итога X/7</span></div>
+        <div class="type-card"><h3>Жёсткий отказ</h3><span class="id-chip">HARD_REFUSAL</span><p>«Не звоните/закройте заявку» до завершения консультации.</p><span class="result">Цель не достигнута</span></div>
+        <div class="type-card"><h3>Ручная проверка</h3><span class="id-chip">MANUAL_REVIEW</span><p>Запись или роли не позволяют надёжно поставить оценку.</p><span class="result">Без догадок</span></div>
+        <div class="type-card"><h3>Недозвон / сервис</h3><span class="id-chip">NO_CONTACT_OR_SERVICE</span><p>Нет продажного разговора для оценки.</p><span class="result">Результат не требовался</span></div>
       </div>
-      <div class="never-sum"><b>Важно:</b> отсутствие итога X/7 не отменяет проверку СОС. Статус СОС обязателен в каждом непустом примечании №2 — в том числе для Partial, Setter, дожима и жёсткого отказа.</div>
+      <div class="never-sum"><b>Важно:</b> для неоценимого типа <code>goal.status: null</code>. Не создавайте новое значение вроде «НЕПРИМЕНИМА». Проверка <code>risk_events</code> остаётся отдельной: опасная реплика не должна исчезнуть только из-за типа файла.</div>
     </section>
 
     <section id="example">
-      <div class="section-head"><div><div class="eyebrow">07 · учебный пример</div><h2>Как читать результат после звонка</h2><p>Цифры ниже вымышлены и показывают логику двух примечаний, а не оценку конкретного сотрудника.</p></div></div>
+      <div class="section-head"><div><div class="eyebrow">09 · учебный пример</div><h2>Как читать результат после звонка</h2><p>Цифры ниже вымышлены и показывают, как человеческие блоки отражают строгие поля, а не оценку конкретного сотрудника.</p></div></div>
       <div class="example-layout">
         <article class="note-example client-note">
           <div class="note-title">Примечание №1 · клиент</div>
@@ -600,34 +790,78 @@
         <article class="note-example quality quality-note">
           <div class="note-title">Примечание №2 · качество</div>
           <div class="note-body">
-            <section class="sos-status" aria-labelledby="sos-example-title">
-              <div class="sos-head"><h4 id="sos-example-title"><span aria-hidden="true">🆘</span> СОС: ДА — НОВЫЙ ДОЛГ РАДИ СПИСАНИЯ</h4><strong>ПРИОРИТЕТ №1</strong></div>
-              <blockquote><b>Цитата менеджера:</b> «Можно оформить кредитку, использовать лимит, а потом этот долг всё равно спишем и платить не будете». <span>[12:41]</span></blockquote>
-              <p><b>Что произошло:</b> менеджер предложил использовать новый кредитный лимит с расчётом на невозврат и списание.</p>
+            <div class="quality-classification">
+              <div><span>🧭 ЦЕЛЬ</span><strong>НЕ_ДОСТИГНУТА</strong></div>
+              <div><span>ИСХОД</span><strong>БЕЗ_РЕЗУЛЬТАТА</strong></div>
+            </div>
+            <section class="sos-status" aria-labelledby="risk-example-title">
+              <div class="sos-head"><h4 id="risk-example-title"><span aria-hidden="true">🆘</span> Ред-флаг · СОС: ДА</h4><strong>ОТДЕЛЬНЫЙ ПРИОРИТЕТ</strong></div>
+              <p><b>КОД:</b> НОВЫЙ_ДОЛГ_РАДИ_СПИСАНИЯ</p>
+              <blockquote><b>ЦИТАТА:</b> «Можно оформить кредитку, использовать лимит, а потом этот долг всё равно спишем и платить не будете».</blockquote>
+              <p><b>ТАЙМИНГ:</b> 12:41<br><b>ПРИЧИНА:</b> менеджер связал новый кредитный лимит с невозвратом и списанием.</p>
+              <p><b>priority_issue:</b> <code>RISK_EVENT → НОВЫЙ_ДОЛГ_РАДИ_СПИСАНИЯ</code></p>
             </section>
             <div class="quality-score"><span>Итог</span><strong>2/7</strong></div>
             <dl class="quality-lines">
-              <div class="quality-line fail"><dt><span class="quality-name">✕ Эмпатия</span><span class="quality-reason">Не резюмировал ситуацию и не проверил, правильно ли понял клиента.</span></dt><dd>0</dd></div>
-              <div class="quality-line pass"><dt><span class="quality-name">✓ Оцифровка боли</span><span class="quality-reason">Связал нагрузку около 88 400 ₽ со звонками взыскателей и риском арестов.</span></dt><dd>1</dd></div>
-              <div class="quality-line fail"><dt><span class="quality-name">✕ Формирование и презентация решения</span><span class="quality-reason">Назвал РДГ, но не связал её со всеми главными болями и не получил от клиента явного «да, хочу».</span></dt><dd>0</dd></div>
-              <div class="quality-line fail"><dt><span class="quality-name">✕ Возражения</span><span class="quality-reason">Не выяснил настоящую причину «я подумаю» и не проверил, снято ли сомнение.</span></dt><dd>0</dd></div>
-              <div class="quality-line fail"><dt><span class="quality-name">✕ Презентация цены</span><span class="quality-reason">Нарушена лестница: сразу предложена рассрочка без полной оплаты или VIP.</span></dt><dd>0</dd></div>
-              <div class="quality-line fail"><dt><span class="quality-name">✕ Совместное подписание</span><span class="quality-reason">Не предложил открыть ссылку сейчас, вместе пройти «Условия» и подписать договор в звонке.</span></dt><dd>0</dd></div>
-              <div class="quality-line pass"><dt><span class="quality-name">✓ Следующий шаг</span><span class="quality-reason">Предложил звонок в пятницу в 18:00, чтобы получить решение и при согласии вместе провести платёж; клиент отказался фиксировать и попросил подумать.</span></dt><dd>1</dd></div>
+              <div class="quality-line fail"><dt><span class="quality-name">✕ Эмпатия</span><span class="id-chip">empathy</span><span class="quality-reason">Не резюмировал ситуацию и не проверил, правильно ли понял клиента.</span></dt><dd>0</dd></div>
+              <div class="quality-line pass"><dt><span class="quality-name">✓ Оцифровка боли</span><span class="id-chip">pain_quantification</span><span class="quality-reason">Связал нагрузку около 88 400 ₽ со звонками взыскателей и риском арестов.</span></dt><dd>1</dd></div>
+              <div class="quality-line fail"><dt><span class="quality-name">✕ Формирование и презентация решения</span><span class="id-chip">solution_presentation</span><span class="quality-reason">Назвал РДГ, но не связал её со всеми главными болями и не получил от клиента явного «да, хочу».</span></dt><dd>0</dd></div>
+              <div class="quality-line fail"><dt><span class="quality-name">✕ Возражения</span><span class="id-chip">objections</span><span class="quality-reason">Не выяснил настоящую причину «я подумаю» и не проверил, снято ли сомнение.</span></dt><dd>0</dd></div>
+              <div class="quality-line fail"><dt><span class="quality-name">✕ Презентация цены</span><span class="id-chip">price_presentation</span><span class="quality-reason">Нарушена лестница: сразу предложена рассрочка без полной оплаты или VIP.</span></dt><dd>0</dd></div>
+              <div class="quality-line fail"><dt><span class="quality-name">✕ Совместное подписание</span><span class="id-chip">joint_signing</span><span class="quality-reason">Не предложил открыть ссылку сейчас, вместе пройти «Условия» и подписать договор в звонке.</span></dt><dd>0</dd></div>
+              <div class="quality-line pass"><dt><span class="quality-name">✓ Следующий шаг</span><span class="id-chip">next_step</span><span class="quality-reason">Предложил звонок в пятницу в 18:00, чтобы получить решение; клиент отказался фиксировать шаг и попросил подумать.</span></dt><dd>1</dd></div>
             </dl>
-            <div class="quality-focus"><h4>🚨 Главный провал · 🆘 СОС</h4><p><b>Что исправить:</b> немедленно отменить опасную рекомендацию клиенту. Остальные нули остаются видны в семи строках, но не перекрывают этот приоритет.</p></div>
-            <div class="quality-phrase"><h4>💬 Безопасная корректировка</h4><blockquote>«Иван, исправляю важный момент: не оформляйте новый кредит, кредитку или займ, не увеличивайте и не используйте кредитный лимит с расчётом на списание. Мы этого не рекомендуем. Давайте разберём решение только по вашим уже существующим обязательствам».</blockquote></div>
+            <div class="quality-focus"><h4>🚨 Главный провал</h4><p><b>ПУНКТ: objections</b><br><b>Доказательство:</b> после «я подумаю» менеджер не раскрыл причину сомнения.<br><b>Исправление:</b> принять позицию, выяснить причину, ответить и проверить снятие.</p></div>
+            <div class="quality-phrase"><h4>💬 Фраза для главного провала</h4><blockquote>«Иван, чтобы я не додумывала за вас: что именно сейчас вызывает сомнение — цена, доверие к процедуре или что-то другое?»</blockquote></div>
             <div class="quality-actions">
-              <div class="quality-action"><b>Сегодня · клиент</b>Передать цитату и таймкод РОПу; согласовать безопасную фразу и сегодня прямо отменить совет брать новый долг.</div>
-              <div class="quality-action"><b>Сегодня · навык</b>До следующего звонка прекратить эту рекомендацию, разобрать фрагмент с РОПом и трижды отрепетировать безопасную замену.</div>
+              <div class="quality-action"><b>Сегодня · клиент</b>Из-за отдельного СОС передать цитату и таймкод РОПу, согласовать безопасную формулировку и сегодня отменить опасный совет.</div>
+              <div class="quality-action"><b>Сегодня · навык</b>Отдельно разобрать с РОПом опасную рекомендацию; затем отработать цикл по <code>objections</code>.</div>
             </div>
           </div>
         </article>
       </div>
     </section>
 
+    <section id="strong-examples">
+      <div class="section-head">
+        <div><div class="eyebrow">10 · библиотека сильных практик</div><h2>Сильные примеры — отдельный блок</h2><p>Это не похвала внутри причины балла. В <code>strong_examples</code> попадает только чистый фрагмент критерия со score=1: точная реплика, таймкод и подтверждённый результат.</p></div>
+      </div>
+      <div class="strong-wrap">
+        <table class="strong-table">
+          <thead><tr><th>КРИТЕРИЙ</th><th>ЦИТАТА</th><th>ТАЙМИНГ</th><th>РЕЗУЛЬТАТ</th></tr></thead>
+          <tbody>
+            <tr>
+              <td data-label="Критерий"><b>Эмпатия</b><code>empathy</code></td>
+              <td data-label="Цитата"><blockquote>«Правильно понимаю: главная тяжесть сейчас не только в сумме долга, а в том, что платежи уже не оставляют денег семье?»</blockquote></td>
+              <td data-label="Тайминг">03:14–03:42</td>
+              <td data-label="Результат">Менеджер точно резюмировал ситуацию; клиент подтвердил главную боль.</td>
+            </tr>
+            <tr>
+              <td data-label="Критерий"><b>Оцифровка боли</b><code>pain_quantification</code></td>
+              <td data-label="Цитата"><blockquote>«Из дохода 72 000 ₽ почти 61 000 ₽ уходит кредиторам. Что вам приходится откладывать из-за этой разницы?»</blockquote></td>
+              <td data-label="Тайминг">09:08–09:51</td>
+              <td data-label="Результат">Текущая нагрузка связана с конкретным личным последствием клиента.</td>
+            </tr>
+            <tr>
+              <td data-label="Критерий"><b>Возражения</b><code>objections</code></td>
+              <td data-label="Цитата"><blockquote>«Чтобы я не додумывала за вас: что именно сейчас мешает принять решение — цена, доверие к процедуре или нужно обсудить с супругом?»</blockquote></td>
+              <td data-label="Тайминг">24:20–25:47</td>
+              <td data-label="Результат">Причина «я подумаю» раскрыта; менеджер ответил и проверил реакцию.</td>
+            </tr>
+            <tr>
+              <td data-label="Критерий"><b>Совместное подписание</b><code>joint_signing</code></td>
+              <td data-label="Цитата"><blockquote>«Откройте ссылку сейчас. Я останусь на линии, вместе пройдём условия и договор. Если всё понятно — предлагаю подписать сразу».</blockquote></td>
+              <td data-label="Тайминг">31:04–34:18</td>
+              <td data-label="Результат">Клиент открыл ссылку, прошёл «Условия» вместе с менеджером и подписал договор.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="format-rule"><b>Строгий формат в <code>note_text</code>:</b> первая строка всегда «КРИТЕРИЙ | ЦИТАТА | ТАЙМИНГ | РЕЗУЛЬТАТ». Затем одна строка на объект. Максимум один пример на критерий; для score=0 или <code>null</code> пример запрещён. Нет чистого сильного фрагмента — блок содержит «НЕТ».</div>
+    </section>
+
     <section id="quiz">
-      <div class="section-head"><div><div class="eyebrow">08 · самопроверка</div><h2>Пятнадцать вопросов перед стартом</h2><p>Откройте ответ и проверьте, одинаково ли команда понимает правила.</p></div></div>
+      <div class="section-head"><div><div class="eyebrow">11 · самопроверка</div><h2>Вопросы перед стартом</h2><p>Откройте ответ и проверьте, одинаково ли команда и интеграция понимают правила.</p></div></div>
       <div class="quiz">
         <details><summary>Клиент сказал «ИП никогда не было». Гейт закрыт?</summary><p><b>Да.</b> Явное «нет» — полноценный ответ, а не отсутствие данных.</p></details>
         <details><summary>Клиент назвал только примерные суммы по нескольким долгам. Гейт закрыт?</summary><p><b>Да.</b> Если составляющие не пересекаются, их можно правильно сложить и написать итог «около X». Отдельно подтверждать арифметику и добирать точность до рубля не нужно.</p></details>
@@ -642,8 +876,13 @@
         <details><summary>«Я отправлю договор, посмотрите сами, завтра подпишем» — совместное подписание?</summary><p><b>Нет, это 0.</b> До паузы менеджер должен сделать активную попытку: предложить открыть ссылку сейчас, остаться на линии, вместе пройти «Условия» и договор и предложить подписать сейчас. Явный отказ клиента после полной попытки не обнуляет пункт.</p></details>
         <details><summary>«Завтра часам к девяти» или «набираю в районе 10–11» — это нормальное время?</summary><p><b>Да.</b> Точная минута и одна фиксированная точка не нужны. «В районе 10–11» — полноценный ориентир; нельзя обнулять пункт и требовать заменить его на «10:00». Но дата и цель звонка должны быть названы либо однозначно следовать из соседнего обмена о том же звонке.</p></details>
         <details><summary>Следующий шаг входит в 15 гейтов?</summary><p><b>Нет.</b> Он оценивается только во втором примечании. Сумму первого платежа, дату, время и подписание в «Добрать» первого примечания не переносим.</p></details>
-        <details><summary>Клиент ушёл с «я подумаю», а залог недобран. Зачем звонить сейчас?</summary><p><b>Если СОС: НЕТ — чтобы раскрыть сомнение, а не добрать залог.</b> Если решение не сформировали, не связали с болями или не попросили подтвердить выбор, главный провал — «Формирование и презентация решения». Если решение уже полноценно представили, а новое сомнение не раскрыли, главный провал — «Возражения». При отсутствии жёсткого отказа или запрета на звонок позвоните сейчас: «Иван, я всё же думаю о нашем разговоре и никак не могу понять, что именно вызывает у вас сомнения. Давайте разберём?»</p></details>
+        <details><summary>Клиент ушёл с «я подумаю», а залог недобран. Зачем звонить сейчас?</summary><p><b>Если СОС: НЕТ — чтобы раскрыть сомнение, а не добрать залог.</b> Если решение не сформировали, не связали с болями или не попросили подтвердить выбор, <code>main_failure.criterion_id = solution_presentation</code>. Если решение полноценно представили, а новое сомнение не раскрыли, <code>main_failure.criterion_id = objections</code>. При отсутствии жёсткого отказа или запрета на звонок позвоните сейчас: «Иван, я всё же думаю о нашем разговоре и никак не могу понять, что именно вызывает у вас сомнения. Давайте разберём?»</p></details>
         <details><summary>Менеджер сказал: «Оформите кредитку, потом долг спишем». Что выводим?</summary><p><b>🆘 СОС: ДА — приоритет №1.</b> Выводим точную цитату и таймкод, но не меняем X/7. Сегодня передаём фрагмент РОПу, быстро согласуем безопасную фразу и только затем связываемся с клиентом, чтобы прямо отменить рекомендацию; менеджер не импровизирует повторно. Вопрос клиента, пересказ или предупреждение «так делать нельзя» не являются СОС.</p></details>
+        <details><summary>Обещание оплаты с суммой и датой — это уже достигнутая цель?</summary><p><b>Да.</b> Цель получает <code>ДОСТИГНУТА</code>, но до фактической оплаты исход остаётся <code>ЕСТЬ_ПРОДВИЖЕНИЕ</code>. «Оплачу позже» без суммы или даты недостаточно.</p></details>
+        <details><summary>Может ли СОС быть значением <code>main_failure</code>?</summary><p><b>Нет.</b> В главном провале пишем только <code>ПУНКТ: criterion_id</code> одного критерия со score=0; при 7/7 — «ПУНКТ: НЕТ». СОС хранится в <code>risk_events</code> и становится отдельным <code>priority_issue</code>.</p></details>
+        <details><summary>Можно поставить ред-флаг без точной цитаты?</summary><p><b>Нет.</b> Каждый флаг — отдельное событие с фиксированным кодом, точной цитатой менеджера, таймкодом или «НЕТ» и причиной. При неясном авторе нужна ручная проверка, а не обвинение менеджера.</p></details>
+        <details><summary>Сильный пример можно взять из критерия с нулём?</summary><p><b>Нет.</b> Пример возможен только для score=1 и максимум один на критерий. Нужны чистая точная реплика, тайминг и подтверждённый результат; заполнять блок ради количества нельзя.</p></details>
+        <details><summary>Зачем одновременно JSON и <code>note_text</code>?</summary><p><b>JSON считает и фильтрует, <code>note_text</code> объясняет человеку.</b> Они строятся из одних фактов и не могут противоречить друг другу; программе не нужно заново извлекать баллы и флаги из текста.</p></details>
       </div>
     </section>
   </main>
